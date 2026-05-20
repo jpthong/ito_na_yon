@@ -1,0 +1,81 @@
+﻿using Ghotel.All_user;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Ghotel
+{
+    public partial class Dashboard : Form
+    {
+        public Dashboard()
+        {
+            InitializeComponent();
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DsExitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void CrBtn_Click(object sender, EventArgs e)
+        {
+            Moving_panel.Left = CrBtn.Left+18;
+        }
+
+        private void AddrmBtn_Click(object sender, EventArgs e)
+        {
+            Moving_panel.Left = AddrmBtn.Left+18;  
+            addroom1.BringToFront();
+            addroom1.Visible = true;
+        }
+
+        private void CoBtn_Click(object sender, EventArgs e)
+        {
+            Moving_panel.Left = CoBtn.Left+18;
+        }
+
+        private void CdBtn_Click(object sender, EventArgs e)
+        {
+            Moving_panel.Left = CdBtn.Left+18;
+        }
+
+        private void EmpBtn_Click(object sender, EventArgs e)
+        {
+            Moving_panel.Left = EmpBtn.Left+18;
+        }
+
+        private void MiniBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void addroom1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            addroom1.Visible = false;
+            AddrmBtn.PerformClick();
+        }
+        /*
+private void guna2Button3_Click(object sender, EventArgs e)
+{
+
+}
+*/
+
+    }
+}
