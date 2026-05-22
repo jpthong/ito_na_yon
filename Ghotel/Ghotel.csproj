@@ -92,6 +92,12 @@
     <Compile Include="All user\Addroom.Designer.cs">
       <DependentUpon>Addroom.cs</DependentUpon>
     </Compile>
+    <Compile Include="All user\UC_CustomerRegistration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All user\UC_CustomerRegistration.Designer.cs">
+      <DependentUpon>UC_CustomerRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,8 +113,23 @@
     <Compile Include="function.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_CustomerDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_CustomerDetails.Designer.cs">
+      <DependentUpon>UC_CustomerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_Employee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Employee.Designer.cs">
+      <DependentUpon>uc_Employee.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="All user\Addroom.resx">
       <DependentUpon>Addroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="All user\UC_CustomerRegistration.resx">
+      <DependentUpon>UC_CustomerRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -125,6 +146,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UC_CustomerDetails.resx">
+      <DependentUpon>UC_CustomerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_Employee.resx">
+      <DependentUpon>uc_Employee.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

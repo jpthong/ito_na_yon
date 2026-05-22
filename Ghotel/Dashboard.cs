@@ -18,11 +18,6 @@ namespace Ghotel
             InitializeComponent();
         }
 
-        private void guna2Button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void DsExitBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -31,6 +26,8 @@ namespace Ghotel
         private void CrBtn_Click(object sender, EventArgs e)
         {
             Moving_panel.Left = CrBtn.Left+18;
+            uC_CustomerRegistration1.Visible = true;
+            uC_CustomerRegistration1.BringToFront();
         }
 
         private void AddrmBtn_Click(object sender, EventArgs e)
@@ -47,12 +44,16 @@ namespace Ghotel
 
         private void CdBtn_Click(object sender, EventArgs e)
         {
-            Moving_panel.Left = CdBtn.Left+18;
+            uC_CustomerDetails11.Visible = true;
+            Moving_panel.Left = CdBtn.Left + 18;
+            uC_CustomerDetails11.BringToFront();
         }
 
         private void EmpBtn_Click(object sender, EventArgs e)
-        {
+        {   
+           uc_Employee1.Visible = true;
             Moving_panel.Left = EmpBtn.Left+18;
+           uc_Employee1.BringToFront();
         }
 
         private void MiniBtn_Click(object sender, EventArgs e)
@@ -68,6 +69,8 @@ namespace Ghotel
         private void Dashboard_Load(object sender, EventArgs e)
         {
             addroom1.Visible = false;
+           uC_CustomerRegistration1.Visible = false;
+           uc_Employee1.Visible = false;
             AddrmBtn.PerformClick();
         }
         /*

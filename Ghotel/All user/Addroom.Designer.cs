@@ -202,7 +202,7 @@
             this.RoomtypeTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.RoomtypeTextbox.ItemHeight = 30;
             this.RoomtypeTextbox.Items.AddRange(new object[] {
-            "Econo",
+            "econo",
             "premium",
             "deluxe"});
             this.RoomtypeTextbox.Location = new System.Drawing.Point(1223, 269);
@@ -222,7 +222,7 @@
             this.BedTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.BedTextbox.ItemHeight = 30;
             this.BedTextbox.Items.AddRange(new object[] {
-            "Single ",
+            "Single bed",
             "Double bed",
             "Triple bed"});
             this.BedTextbox.Location = new System.Drawing.Point(1223, 356);
@@ -274,6 +274,8 @@
             this.Name = "Addroom";
             this.Size = new System.Drawing.Size(1796, 841);
             this.Load += new System.EventHandler(this.Addroom_Load);
+            this.Enter += new System.EventHandler(this.Addroom_Enter);
+            this.Leave += new System.EventHandler(this.Addroom_Leave);
             ((System.ComponentModel.ISupportInitialize)(this.roomgrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

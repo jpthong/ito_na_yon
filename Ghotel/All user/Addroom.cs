@@ -13,8 +13,8 @@ namespace Ghotel.All_user
 {
     public partial class Addroom : UserControl
     {
-       function fn = new function();
-        String query;  
+        function fn = new function();
+        String query;
         public Addroom()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace Ghotel.All_user
 
         private void Addroom_Load(object sender, EventArgs e)
         {
-             query = "select * from Addrooms";
+            query = "select * from Addrooms";
             DataSet ds = fn.getData(query);
             roomgrid.DataSource = ds.Tables[0];
         }
@@ -34,21 +34,43 @@ namespace Ghotel.All_user
                 String roomno = RmTextbox.Text;
                 String type = RoomtypeTextbox.Text;
                 String bed = BedTextbox.Text;
-               Int64 price = Int64.Parse(PriceTexbox.Text);
-                query = "insert into Addrooms (room_number, room_type, bed, price) values ('" + roomno + "','" + type + "','" + bed + "'," + price + ")";
-                fn.setData(query, "Room Added.");
+                Int64 price = Int64.Parse(PriceTexbox.Text);
+                Int64 roomnoInt = Int64.Parse(RmTextbox.Text);
+                query = "INSERT INTO addrooms (room_number, room_type, bed, price) VALUES (" + roomnoInt + ",'" + type + "','" + bed + "'," + price + ")";
+
+                fn.setData(query, "Room added.");
                 Addroom_Load(this, null);
             }
             else
             {
                 MessageBox.Show("Please fill all the fields.", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                clearAll();
             }
         }
 
-    }
-    }
+        public void clearAll()
+        {
+            RmTextbox.Clear();
+            RoomtypeTextbox.SelectedIndex = -1;
+            BedTextbox.SelectedIndex = -1;
+            PriceTexbox.Clear();
 
-     
-    
+        }
+
+        private void Addroom_Leave(object sender, EventArgs e)
+        {
+            clearAll();
+        }
+
+        private void Addroom_Enter(object sender, EventArgs e)
+        {
+            Addroom_Load(this, null);
+        }
+    }
+}
+
+
+
+
 
