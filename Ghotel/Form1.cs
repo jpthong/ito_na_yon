@@ -12,6 +12,8 @@ namespace Ghotel
 {
     public partial class Form1 : Form
     {
+        function fn = new function();
+        string query;
         public Form1()
         {
             InitializeComponent();
@@ -24,12 +26,23 @@ namespace Ghotel
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            if (UserTextbox.Text == "admin" && PassTextBox.Text == "admin123")
+            query = "select emp_username, emp_password from employee where emp_username = '" + UserTextbox.Text + "' and emp_password = '" + PassTextBox.Text + "'";
+            DataSet ds = fn.getData(query);
+
+            if (ds.Tables[0].Rows.Count != 0)
             {
-              Errorlbl.Visible = false;
-              Dashboard ds = new Dashboard();
-            this.Hide();
-                ds.Show();
+                Errorlbl.Visible = false;
+                Dashboard dash = new Dashboard();
+                this.Hide();
+                dash.Show();
+            }
+
+            else if (UserTextbox.Text == "admin" && PassTextBox.Text == "admin123")
+            {
+                Errorlbl.Visible = false;
+                Dashboard dash = new Dashboard();
+                this.Hide();
+                dash.Show();
             }
             else
             {

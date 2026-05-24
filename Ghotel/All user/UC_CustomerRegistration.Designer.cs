@@ -83,7 +83,7 @@
             this.birthTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.birthTxt.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.birthTxt.Location = new System.Drawing.Point(26, 387);
-            this.birthTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.birthTxt.Margin = new System.Windows.Forms.Padding(2);
             this.birthTxt.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.birthTxt.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.birthTxt.Name = "birthTxt";
@@ -97,7 +97,7 @@
             this.checkinTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.checkinTxt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.checkinTxt.Location = new System.Drawing.Point(387, 226);
-            this.checkinTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkinTxt.Margin = new System.Windows.Forms.Padding(2);
             this.checkinTxt.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.checkinTxt.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.checkinTxt.Name = "checkinTxt";
@@ -352,7 +352,7 @@
             "Female",
             "Others"});
             this.ct_gen.Location = new System.Drawing.Point(26, 310);
-            this.ct_gen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ct_gen.Margin = new System.Windows.Forms.Padding(2);
             this.ct_gen.Name = "ct_gen";
             this.ct_gen.Size = new System.Drawing.Size(177, 36);
             this.ct_gen.TabIndex = 19;
@@ -391,7 +391,7 @@
             "Double bed",
             "Triple bed"});
             this.ct_bed.Location = new System.Drawing.Point(727, 96);
-            this.ct_bed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ct_bed.Margin = new System.Windows.Forms.Padding(2);
             this.ct_bed.Name = "ct_bed";
             this.ct_bed.Size = new System.Drawing.Size(177, 36);
             this.ct_bed.TabIndex = 23;
@@ -408,7 +408,7 @@
             this.AllocateBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AllocateBtn.ForeColor = System.Drawing.Color.White;
             this.AllocateBtn.Location = new System.Drawing.Point(728, 372);
-            this.AllocateBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AllocateBtn.Margin = new System.Windows.Forms.Padding(2);
             this.AllocateBtn.Name = "AllocateBtn";
             this.AllocateBtn.Size = new System.Drawing.Size(135, 37);
             this.AllocateBtn.TabIndex = 24;
@@ -430,7 +430,7 @@
             "premium",
             "deluxe"});
             this.ct_rt.Location = new System.Drawing.Point(728, 175);
-            this.ct_rt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ct_rt.Margin = new System.Windows.Forms.Padding(2);
             this.ct_rt.Name = "ct_rt";
             this.ct_rt.Size = new System.Drawing.Size(177, 36);
             this.ct_rt.TabIndex = 25;
@@ -440,7 +440,7 @@
             // 
             this.ct_rn.FormattingEnabled = true;
             this.ct_rn.Location = new System.Drawing.Point(728, 249);
-            this.ct_rn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ct_rn.Margin = new System.Windows.Forms.Padding(2);
             this.ct_rn.Name = "ct_rn";
             this.ct_rn.Size = new System.Drawing.Size(177, 21);
             this.ct_rn.TabIndex = 26;
@@ -477,7 +477,7 @@
             this.Controls.Add(this.checkinTxt);
             this.Controls.Add(this.birthTxt);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UC_CustomerRegistration";
             this.Size = new System.Drawing.Size(1347, 683);
             this.Load += new System.EventHandler(this.UC_CustomerRegistration_Load);

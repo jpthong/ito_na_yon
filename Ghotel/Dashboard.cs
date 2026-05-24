@@ -39,7 +39,11 @@ namespace Ghotel
 
         private void CoBtn_Click(object sender, EventArgs e)
         {
-            Moving_panel.Left = CoBtn.Left+18;
+
+            Moving_panel.Left = CoBtn.Left + 18;
+            customerCheckOut1.Visible = true; 
+            customerCheckOut1.BringToFront();
+
         }
 
         private void CdBtn_Click(object sender, EventArgs e)
@@ -70,7 +74,8 @@ namespace Ghotel
         {
             addroom1.Visible = false;
            uC_CustomerRegistration1.Visible = false;
-           uc_Employee1.Visible = false;
+            uc_Employee1.Visible = false;
+            customerCheckOut1.Visible = false;
             AddrmBtn.PerformClick();
         }
         /*

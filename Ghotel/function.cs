@@ -8,48 +8,74 @@ namespace Ghotel
     internal class function
     {
         private string connectionString =
-            "Host=coping-rooster-26499.j77.aws-ap-southeast-1.cockroachlabs.cloud;" +
-            "Port=26257;Database=defaultdb;SSL Mode=Require;" +
-            "Password=QwbNyu3UKcSZJsilx4dvxA;Username=francis;Trust Server Certificate=true";
+        "Host=coping-rooster-26499.j77.aws-ap-southeast-1.cockroachlabs.cloud;" +
+        "Port=26257;Database=defaultdb;SSL Mode=Require;" +
+        "Password=QwbNyu3UKcSZJsilx4dvxA;Username=francis;Trust Server Certificate=true";
 
         public NpgsqlConnection getConnection()
-        { 
+        {
             return new NpgsqlConnection(connectionString);
         }
 
         public DataSet getData(string query)
         {
-            using (NpgsqlConnection con = getConnection())
+            try
             {
-                NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, con);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-                return ds;
+                using (NpgsqlConnection con = getConnection())
+                {
+                    NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, con);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    return ds;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
             }
         }
 
         public void setData(string query, string message)
         {
-            using (NpgsqlConnection con = getConnection())
+            try
             {
-                con.Open();
-                using (NpgsqlCommand cmd = new NpgsqlCommand(query, con))
+                using (NpgsqlConnection con = getConnection())
                 {
-                    cmd.ExecuteNonQuery();
+                    con.Open();
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, con))
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
                 }
-            }
 
-            MessageBox.Show(message, "Success",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(message, "Success",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public NpgsqlDataReader getForCombo(string query)
         {
-            NpgsqlConnection con = getConnection();
-            con.Open();
-
-            NpgsqlCommand cmd = new NpgsqlCommand(query, con);
-            return cmd.ExecuteReader(CommandBehavior.CloseConnection);
+            try
+            {
+                NpgsqlConnection con = getConnection();
+                con.Open();
+                NpgsqlCommand cmd = new NpgsqlCommand(query, con);
+                return cmd.ExecuteReader(CommandBehavior.CloseConnection);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
         }
+        
     }
 }

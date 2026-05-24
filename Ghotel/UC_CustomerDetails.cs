@@ -43,16 +43,16 @@ namespace Ghotel
             {
                 query = "select cid, customer, mobile, nationality, gender, dob, idproof," +
                     " address, checkin, checkout, room_type, bed, " +
-                    "price from customer inner join addrooms on customer.room_id = addrooms.room_id where checkout is NULL";
+                    "price from customer inner join addrooms on customer.room_id = addrooms.room_id where checkout = 'NO'";
                 DataSet ds = fn.getData(query);
                 guna2DataGridView1.DataSource = ds.Tables[0];
             }
 
-            else if (cb_SortBy.SelectedIndex == 1)
+            else if (cb_SortBy.SelectedIndex == 2)
             {
                 query = "select cid, customer, mobile, nationality, gender, dob, idproof," +
                     " address, checkin, checkout, room_type, bed, " +
-                    "price from customer inner join addrooms on customer.room_id = addrooms.room_id where checkout is not NULL";
+                    "price from customer inner join addrooms on customer.room_id = addrooms.room_id where checkout  = 'YES'";
                 DataSet ds = fn.getData(query);
                 guna2DataGridView1.DataSource = ds.Tables[0];
             }
