@@ -58,6 +58,10 @@
             this.AllocateBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ct_rt = new Guna.UI2.WinForms.Guna2ComboBox();
             this.ct_rn = new System.Windows.Forms.ComboBox();
+            this.ct_username = new Guna.UI2.WinForms.Guna2TextBox();
+            this.ct_password = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -446,11 +450,75 @@
             this.ct_rn.TabIndex = 26;
             this.ct_rn.SelectedIndexChanged += new System.EventHandler(this.ct_rn_SelectedIndexChanged);
             // 
+            // ct_username
+            // 
+            this.ct_username.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ct_username.DefaultText = "";
+            this.ct_username.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.ct_username.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.ct_username.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ct_username.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ct_username.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ct_username.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ct_username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ct_username.Location = new System.Drawing.Point(387, 298);
+            this.ct_username.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ct_username.Name = "ct_username";
+            this.ct_username.PlaceholderText = "Enter Nationality";
+            this.ct_username.SelectedText = "";
+            this.ct_username.Size = new System.Drawing.Size(176, 29);
+            this.ct_username.TabIndex = 27;
+            // 
+            // ct_password
+            // 
+            this.ct_password.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ct_password.DefaultText = "";
+            this.ct_password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.ct_password.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.ct_password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ct_password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ct_password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ct_password.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ct_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ct_password.Location = new System.Drawing.Point(387, 354);
+            this.ct_password.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ct_password.Name = "ct_password";
+            this.ct_password.PlaceholderText = "Enter Nationality";
+            this.ct_password.SelectedText = "";
+            this.ct_password.Size = new System.Drawing.Size(176, 29);
+            this.ct_password.TabIndex = 28;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(385, 277);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(88, 18);
+            this.label14.TabIndex = 29;
+            this.label14.Text = "User Name:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(387, 333);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(75, 18);
+            this.label15.TabIndex = 30;
+            this.label15.Text = "Password";
+            // 
             // UC_CustomerRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.ct_password);
+            this.Controls.Add(this.ct_username);
             this.Controls.Add(this.ct_rn);
             this.Controls.Add(this.ct_rt);
             this.Controls.Add(this.AllocateBtn);
@@ -515,5 +583,9 @@
         private Guna.UI2.WinForms.Guna2Button AllocateBtn;
         private Guna.UI2.WinForms.Guna2ComboBox ct_rt;
         private System.Windows.Forms.ComboBox ct_rn;
+        private Guna.UI2.WinForms.Guna2TextBox ct_password;
+        private Guna.UI2.WinForms.Guna2TextBox ct_username;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
     }
 }

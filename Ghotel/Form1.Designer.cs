@@ -54,6 +54,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1405, 760);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // ExitBtn
             // 
@@ -81,7 +82,7 @@
             this.Errorlbl.ForeColor = System.Drawing.Color.Red;
             this.Errorlbl.Location = new System.Drawing.Point(696, 521);
             this.Errorlbl.Name = "Errorlbl";
-            this.Errorlbl.Size = new System.Drawing.Size(215, 18);
+            this.Errorlbl.Size = new System.Drawing.Size(175, 15);
             this.Errorlbl.TabIndex = 4;
             this.Errorlbl.Text = "Wrong Password or Username";
             this.Errorlbl.Visible = false;
@@ -160,7 +161,7 @@
             this.label1.Location = new System.Drawing.Point(701, 118);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 51);
+            this.label1.Size = new System.Drawing.Size(172, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "User Login";
             // 
@@ -181,11 +182,11 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1560, 867);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

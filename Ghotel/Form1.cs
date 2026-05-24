@@ -26,7 +26,19 @@ namespace Ghotel
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            query = "select emp_username, emp_password from employee where emp_username = '" + UserTextbox.Text + "' and emp_password = '" + PassTextBox.Text + "'";
+            // Admin hardcoded
+            if (UserTextbox.Text == "admin" && PassTextBox.Text == "admin123")
+            {
+                Errorlbl.Visible = false;
+                Dashboard dash = new Dashboard();
+                this.Hide();
+                dash.Show();
+                return;
+            }
+
+            // Check employee table
+            query = "select * from employee where emp_username = '"
+                  + UserTextbox.Text + "' and emp_password = '" + PassTextBox.Text + "'";
             DataSet ds = fn.getData(query);
 
             if (ds.Tables[0].Rows.Count != 0)
@@ -35,21 +47,32 @@ namespace Ghotel
                 Dashboard dash = new Dashboard();
                 this.Hide();
                 dash.Show();
+                return;
             }
 
-            else if (UserTextbox.Text == "admin" && PassTextBox.Text == "admin123")
+            // Check customer table
+            query = "select * from customer where cust_username = '"
+                  + UserTextbox.Text + "' and cust_password = '" + PassTextBox.Text + "'";
+            DataSet ds2 = fn.getData(query);
+
+            if (ds2.Tables[0].Rows.Count != 0)
             {
                 Errorlbl.Visible = false;
-                Dashboard dash = new Dashboard();
+                CustomerDashboard cd = new CustomerDashboard();
                 this.Hide();
-                dash.Show();
+                cd.Show();
+                return;
             }
-            else
-            {
-                
-               Errorlbl.Visible = true;
-                PassTextBox.Clear();
-            }
+
+            // Nothing matched
+            Errorlbl.Visible = true;
+            PassTextBox.Clear();
+        }
+        
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

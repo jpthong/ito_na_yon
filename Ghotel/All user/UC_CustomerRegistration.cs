@@ -77,7 +77,10 @@ namespace Ghotel.All_user
 
         private void AllocateBtn_Click(object sender, EventArgs e)
         {
-            if (ct_name.Text != "" && ct_no.Text != "" && ct_nation.Text != "" && ct_gen.Text != "" && birthTxt.Text != "" && ct_id.Text != "" && ct_address.Text != "" && checkinTxt.Text != "" && ct_pr.Text != "")
+            if (ct_name.Text != "" && ct_no.Text != "" && ct_nation.Text != "" &&
+    ct_gen.Text != "" && birthTxt.Text != "" && ct_id.Text != "" &&
+    ct_address.Text != "" && checkinTxt.Text != "" && ct_pr.Text != "" &&
+    ct_username.Text != "" && ct_password.Text != "")
 
             {
                     
@@ -89,8 +92,12 @@ namespace Ghotel.All_user
                 String id = ct_id.Text;
                 String address = ct_address.Text;
                 String checkin = checkinTxt.Value.ToString("yyyy-MM-dd");
+                String username = ct_username.Text;    
+                String password = ct_password.Text;
 
-                query = "INSERT INTO customer (cname, mobile, nationality, gender, dob, idproof, address, checkin, room_id) VALUES ('" + cname + "'," + contact + ",'" + nation + "','" + gender + "','" + dob + "','" + id + "','" + address + "','" + checkin + "'," + rid + ")";
+                query = "INSERT INTO customer (cname, mobile, nationality, gender, dob, idproof, address, checkin, room_id, cust_username, cust_password) VALUES ('" + cname + "'," + contact + ",'" + nation + "','" + gender + "','" + dob + "','" + id + "','" + address + "','" + checkin + "'," + rid + ",'"
+                + username + "','"   
+                + password + "')";
                 fn.setData(query, "Customer Registered.");
 
                 query = "UPDATE addrooms SET booked = 'YES' WHERE room_number = " + ct_rn.Text.Trim();
