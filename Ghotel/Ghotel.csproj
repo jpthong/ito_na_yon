@@ -111,6 +111,12 @@
     <Compile Include="CustomerForm.Designer.cs">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerRoomView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerRoomView.Designer.cs">
+      <DependentUpon>CustomerRoomView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,12 @@
     <Compile Include="UC_CustomerDetails.Designer.cs">
       <DependentUpon>UC_CustomerDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_CustomerRoomView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_CustomerRoomView.Designer.cs">
+      <DependentUpon>UC_CustomerRoomView.cs</DependentUpon>
+    </Compile>
     <Compile Include="uc_Employee.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerRoomView.resx">
+      <DependentUpon>CustomerRoomView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -168,6 +183,9 @@
     </Compile>
     <EmbeddedResource Include="UC_CustomerDetails.resx">
       <DependentUpon>UC_CustomerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_CustomerRoomView.resx">
+      <DependentUpon>UC_CustomerRoomView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uc_Employee.resx">
       <DependentUpon>uc_Employee.cs</DependentUpon>

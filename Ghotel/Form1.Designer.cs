@@ -37,12 +37,14 @@
             this.UserTextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.customerSignUp = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.customerSignUp);
             this.panel1.Controls.Add(this.ExitBtn);
             this.panel1.Controls.Add(this.Errorlbl);
             this.panel1.Controls.Add(this.LoginBtn);
@@ -96,7 +98,7 @@
             this.LoginBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.LoginBtn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginBtn.ForeColor = System.Drawing.Color.White;
-            this.LoginBtn.Location = new System.Drawing.Point(664, 404);
+            this.LoginBtn.Location = new System.Drawing.Point(663, 384);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(266, 45);
             this.LoginBtn.TabIndex = 3;
@@ -180,6 +182,22 @@
             this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // customerSignUp
+            // 
+            this.customerSignUp.BorderRadius = 22;
+            this.customerSignUp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.customerSignUp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.customerSignUp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.customerSignUp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.customerSignUp.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerSignUp.ForeColor = System.Drawing.Color.White;
+            this.customerSignUp.Location = new System.Drawing.Point(663, 449);
+            this.customerSignUp.Name = "customerSignUp";
+            this.customerSignUp.Size = new System.Drawing.Size(266, 45);
+            this.customerSignUp.TabIndex = 6;
+            this.customerSignUp.Text = "Sign Up";
+            this.customerSignUp.Click += new System.EventHandler(this.customerSignUp_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -211,6 +229,7 @@
         private Guna.UI2.WinForms.Guna2Button LoginBtn;
         private System.Windows.Forms.Label Errorlbl;
         private Guna.UI2.WinForms.Guna2CircleButton ExitBtn;
+        private Guna.UI2.WinForms.Guna2Button customerSignUp;
     }
 }
 

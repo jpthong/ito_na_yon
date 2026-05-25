@@ -36,7 +36,7 @@ namespace Ghotel
                 return;
             }
 
-            // Check employee table
+            
             query = "select * from employee where emp_username = '"
                   + UserTextbox.Text + "' and emp_password = '" + PassTextBox.Text + "'";
             DataSet ds = fn.getData(query);
@@ -50,7 +50,7 @@ namespace Ghotel
                 return;
             }
 
-            // Check customer table
+            
             query = "select * from customer where cust_username = '"
                   + UserTextbox.Text + "' and cust_password = '" + PassTextBox.Text + "'";
             DataSet ds2 = fn.getData(query);
@@ -58,7 +58,7 @@ namespace Ghotel
             if (ds2.Tables[0].Rows.Count != 0)
             {
                 Errorlbl.Visible = false;
-                CustomerDashboard cd = new CustomerDashboard();
+                CustomerRoomView cd = new CustomerRoomView(UserTextbox.Text);
                 this.Hide();
                 cd.Show();
                 return;
@@ -68,11 +68,19 @@ namespace Ghotel
             Errorlbl.Visible = true;
             PassTextBox.Clear();
         }
-        
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void customerSignUp_Click(object sender, EventArgs e)
+        {
+            Errorlbl.Visible = false;
+            CustomerDashboard cd = new CustomerDashboard();
+            this.Hide();
+            cd.Show();
+            return;
         }
     }
 }

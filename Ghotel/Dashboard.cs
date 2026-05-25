@@ -78,6 +78,13 @@ namespace Ghotel
             customerCheckOut1.Visible = false;
             AddrmBtn.PerformClick();
         }
+
+        private void doneBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 form1 = new Form1();
+            form1.Show();
+        }
         /*
 private void guna2Button3_Click(object sender, EventArgs e)
 {
