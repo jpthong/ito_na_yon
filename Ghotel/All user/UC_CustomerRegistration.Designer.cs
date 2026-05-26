@@ -1,4 +1,6 @@
-﻿namespace Ghotel.All_user
+﻿using System;
+
+namespace Ghotel.All_user
 {
     partial class UC_CustomerRegistration
     {
@@ -31,6 +33,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CustomerRegistration));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.birthTxt = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -58,10 +61,15 @@
             this.AllocateBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ct_rt = new Guna.UI2.WinForms.Guna2ComboBox();
             this.ct_rn = new System.Windows.Forms.ComboBox();
-            this.ct_username = new Guna.UI2.WinForms.Guna2TextBox();
-            this.ct_password = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.payBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.Payment_box = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.Discount_box = new Guna.UI2.WinForms.Guna2TextBox();
+            this.DiscountBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.paylbl = new System.Windows.Forms.Label();
+            this.chgelbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -73,10 +81,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(29, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(273, 29);
+            this.label1.Size = new System.Drawing.Size(331, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Customer Registration";
             // 
@@ -86,12 +93,12 @@
             this.birthTxt.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(221)))));
             this.birthTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.birthTxt.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.birthTxt.Location = new System.Drawing.Point(26, 387);
-            this.birthTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.birthTxt.Location = new System.Drawing.Point(35, 476);
+            this.birthTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.birthTxt.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.birthTxt.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.birthTxt.Name = "birthTxt";
-            this.birthTxt.Size = new System.Drawing.Size(188, 22);
+            this.birthTxt.Size = new System.Drawing.Size(251, 27);
             this.birthTxt.TabIndex = 2;
             this.birthTxt.Value = new System.DateTime(2026, 5, 22, 4, 21, 23, 167);
             // 
@@ -100,12 +107,12 @@
             this.checkinTxt.Checked = true;
             this.checkinTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.checkinTxt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.checkinTxt.Location = new System.Drawing.Point(387, 226);
-            this.checkinTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.checkinTxt.Location = new System.Drawing.Point(516, 278);
+            this.checkinTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkinTxt.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.checkinTxt.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.checkinTxt.Name = "checkinTxt";
-            this.checkinTxt.Size = new System.Drawing.Size(188, 18);
+            this.checkinTxt.Size = new System.Drawing.Size(251, 22);
             this.checkinTxt.TabIndex = 2;
             this.checkinTxt.Value = new System.DateTime(2026, 5, 22, 4, 21, 23, 167);
             // 
@@ -113,10 +120,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 73);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(31, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 18);
+            this.label2.Size = new System.Drawing.Size(62, 22);
             this.label2.TabIndex = 5;
             this.label2.Text = "Name:";
             // 
@@ -124,10 +130,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 218);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(31, 268);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 18);
+            this.label3.Size = new System.Drawing.Size(99, 22);
             this.label3.TabIndex = 6;
             this.label3.Text = "Nationality:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -136,10 +141,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(31, 289);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(41, 356);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 18);
+            this.label4.Size = new System.Drawing.Size(75, 22);
             this.label4.TabIndex = 6;
             this.label4.Text = "Gender:";
             // 
@@ -147,10 +151,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(34, 354);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(45, 436);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 18);
+            this.label5.Size = new System.Drawing.Size(115, 22);
             this.label5.TabIndex = 6;
             this.label5.Text = "Date of Birth:";
             // 
@@ -158,10 +161,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(385, 75);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(513, 92);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 18);
+            this.label6.Size = new System.Drawing.Size(80, 22);
             this.label6.TabIndex = 6;
             this.label6.Text = "ID Proof:";
             // 
@@ -169,10 +171,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(387, 146);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(516, 180);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 18);
+            this.label7.Size = new System.Drawing.Size(81, 22);
             this.label7.TabIndex = 6;
             this.label7.Text = "Address:";
             // 
@@ -180,10 +181,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(400, 206);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(533, 254);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 18);
+            this.label8.Size = new System.Drawing.Size(85, 22);
             this.label8.TabIndex = 6;
             this.label8.Text = "Check In:";
             // 
@@ -191,10 +191,9 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(724, 73);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(965, 90);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 18);
+            this.label9.Size = new System.Drawing.Size(47, 22);
             this.label9.TabIndex = 6;
             this.label9.Text = "Bed:";
             // 
@@ -202,10 +201,9 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(724, 146);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(965, 180);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(90, 18);
+            this.label10.Size = new System.Drawing.Size(108, 22);
             this.label10.TabIndex = 6;
             this.label10.Text = "Room Type:";
             // 
@@ -213,10 +211,9 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(724, 218);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(965, 268);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(78, 18);
+            this.label11.Size = new System.Drawing.Size(90, 22);
             this.label11.TabIndex = 6;
             this.label11.Text = "Room No.";
             // 
@@ -224,10 +221,9 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(724, 289);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(965, 356);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 18);
+            this.label12.Size = new System.Drawing.Size(56, 22);
             this.label12.TabIndex = 6;
             this.label12.Text = "Price:";
             // 
@@ -235,10 +231,9 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(23, 146);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(31, 180);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(80, 18);
+            this.label13.Size = new System.Drawing.Size(95, 22);
             this.label13.TabIndex = 5;
             this.label13.Text = "Mobile No.";
             // 
@@ -253,13 +248,14 @@
             this.ct_name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ct_name.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ct_name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ct_name.Location = new System.Drawing.Point(26, 94);
-            this.ct_name.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ct_name.Location = new System.Drawing.Point(35, 116);
+            this.ct_name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ct_name.Name = "ct_name";
             this.ct_name.PlaceholderText = "Enter Full Name";
             this.ct_name.SelectedText = "";
-            this.ct_name.Size = new System.Drawing.Size(176, 29);
+            this.ct_name.Size = new System.Drawing.Size(235, 36);
             this.ct_name.TabIndex = 10;
+            this.ct_name.TextChanged += new System.EventHandler(this.ct_name_TextChanged);
             // 
             // ct_no
             // 
@@ -272,12 +268,12 @@
             this.ct_no.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ct_no.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ct_no.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ct_no.Location = new System.Drawing.Point(26, 175);
-            this.ct_no.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ct_no.Location = new System.Drawing.Point(35, 215);
+            this.ct_no.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ct_no.Name = "ct_no";
             this.ct_no.PlaceholderText = "Enter Contact No.";
             this.ct_no.SelectedText = "";
-            this.ct_no.Size = new System.Drawing.Size(176, 29);
+            this.ct_no.Size = new System.Drawing.Size(235, 36);
             this.ct_no.TabIndex = 11;
             // 
             // ct_nation
@@ -291,12 +287,12 @@
             this.ct_nation.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ct_nation.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ct_nation.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ct_nation.Location = new System.Drawing.Point(26, 250);
-            this.ct_nation.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ct_nation.Location = new System.Drawing.Point(35, 308);
+            this.ct_nation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ct_nation.Name = "ct_nation";
             this.ct_nation.PlaceholderText = "Enter Nationality";
             this.ct_nation.SelectedText = "";
-            this.ct_nation.Size = new System.Drawing.Size(176, 29);
+            this.ct_nation.Size = new System.Drawing.Size(235, 36);
             this.ct_nation.TabIndex = 12;
             // 
             // ct_id
@@ -310,12 +306,12 @@
             this.ct_id.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ct_id.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ct_id.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ct_id.Location = new System.Drawing.Point(388, 96);
-            this.ct_id.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ct_id.Location = new System.Drawing.Point(517, 118);
+            this.ct_id.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ct_id.Name = "ct_id";
             this.ct_id.PlaceholderText = "Enter ID";
             this.ct_id.SelectedText = "";
-            this.ct_id.Size = new System.Drawing.Size(176, 29);
+            this.ct_id.Size = new System.Drawing.Size(235, 36);
             this.ct_id.TabIndex = 13;
             // 
             // ct_pr
@@ -330,14 +326,14 @@
             this.ct_pr.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ct_pr.ForeColor = System.Drawing.Color.Black;
             this.ct_pr.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ct_pr.Location = new System.Drawing.Point(728, 310);
-            this.ct_pr.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ct_pr.Location = new System.Drawing.Point(971, 382);
+            this.ct_pr.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ct_pr.Name = "ct_pr";
             this.ct_pr.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.ct_pr.PlaceholderText = "Price";
             this.ct_pr.ReadOnly = true;
             this.ct_pr.SelectedText = "";
-            this.ct_pr.Size = new System.Drawing.Size(176, 29);
+            this.ct_pr.Size = new System.Drawing.Size(235, 36);
             this.ct_pr.TabIndex = 18;
             this.ct_pr.TextChanged += new System.EventHandler(this.ct_pr_TextChanged);
             // 
@@ -355,10 +351,10 @@
             "Male",
             "Female",
             "Others"});
-            this.ct_gen.Location = new System.Drawing.Point(26, 310);
-            this.ct_gen.Margin = new System.Windows.Forms.Padding(2);
+            this.ct_gen.Location = new System.Drawing.Point(35, 382);
+            this.ct_gen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ct_gen.Name = "ct_gen";
-            this.ct_gen.Size = new System.Drawing.Size(177, 36);
+            this.ct_gen.Size = new System.Drawing.Size(235, 36);
             this.ct_gen.TabIndex = 19;
             // 
             // ct_address
@@ -372,12 +368,12 @@
             this.ct_address.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ct_address.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ct_address.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ct_address.Location = new System.Drawing.Point(390, 173);
-            this.ct_address.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ct_address.Location = new System.Drawing.Point(520, 213);
+            this.ct_address.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ct_address.Name = "ct_address";
             this.ct_address.PlaceholderText = "Enter Full Address";
             this.ct_address.SelectedText = "";
-            this.ct_address.Size = new System.Drawing.Size(176, 29);
+            this.ct_address.Size = new System.Drawing.Size(235, 36);
             this.ct_address.TabIndex = 20;
             // 
             // ct_bed
@@ -394,10 +390,10 @@
             "Single bed",
             "Double bed",
             "Triple bed"});
-            this.ct_bed.Location = new System.Drawing.Point(727, 96);
-            this.ct_bed.Margin = new System.Windows.Forms.Padding(2);
+            this.ct_bed.Location = new System.Drawing.Point(969, 118);
+            this.ct_bed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ct_bed.Name = "ct_bed";
-            this.ct_bed.Size = new System.Drawing.Size(177, 36);
+            this.ct_bed.Size = new System.Drawing.Size(235, 36);
             this.ct_bed.TabIndex = 23;
             this.ct_bed.SelectedIndexChanged += new System.EventHandler(this.ct_bed_SelectedIndexChanged);
             // 
@@ -411,10 +407,10 @@
             this.AllocateBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.AllocateBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AllocateBtn.ForeColor = System.Drawing.Color.White;
-            this.AllocateBtn.Location = new System.Drawing.Point(728, 372);
-            this.AllocateBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.AllocateBtn.Location = new System.Drawing.Point(971, 458);
+            this.AllocateBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AllocateBtn.Name = "AllocateBtn";
-            this.AllocateBtn.Size = new System.Drawing.Size(135, 37);
+            this.AllocateBtn.Size = new System.Drawing.Size(180, 46);
             this.AllocateBtn.TabIndex = 24;
             this.AllocateBtn.Text = "Allocate Room";
             this.AllocateBtn.Click += new System.EventHandler(this.AllocateBtn_Click);
@@ -433,92 +429,159 @@
             "econo",
             "premium",
             "deluxe"});
-            this.ct_rt.Location = new System.Drawing.Point(728, 175);
-            this.ct_rt.Margin = new System.Windows.Forms.Padding(2);
+            this.ct_rt.Location = new System.Drawing.Point(971, 215);
+            this.ct_rt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ct_rt.Name = "ct_rt";
-            this.ct_rt.Size = new System.Drawing.Size(177, 36);
+            this.ct_rt.Size = new System.Drawing.Size(235, 36);
             this.ct_rt.TabIndex = 25;
             this.ct_rt.SelectedIndexChanged += new System.EventHandler(this.ct_rt_SelectedIndexChanged);
             // 
             // ct_rn
             // 
             this.ct_rn.FormattingEnabled = true;
-            this.ct_rn.Location = new System.Drawing.Point(728, 249);
-            this.ct_rn.Margin = new System.Windows.Forms.Padding(2);
+            this.ct_rn.Location = new System.Drawing.Point(971, 306);
+            this.ct_rn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ct_rn.Name = "ct_rn";
-            this.ct_rn.Size = new System.Drawing.Size(177, 21);
+            this.ct_rn.Size = new System.Drawing.Size(235, 24);
             this.ct_rn.TabIndex = 26;
             this.ct_rn.SelectedIndexChanged += new System.EventHandler(this.ct_rn_SelectedIndexChanged);
             // 
-            // ct_username
+            // printDocument1
             // 
-            this.ct_username.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ct_username.DefaultText = "";
-            this.ct_username.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.ct_username.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.ct_username.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.ct_username.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.ct_username.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ct_username.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ct_username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ct_username.Location = new System.Drawing.Point(387, 298);
-            this.ct_username.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.ct_username.Name = "ct_username";
-            this.ct_username.PlaceholderText = "Enter Nationality";
-            this.ct_username.SelectedText = "";
-            this.ct_username.Size = new System.Drawing.Size(176, 29);
-            this.ct_username.TabIndex = 27;
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
-            // ct_password
+            // printPreviewDialog1
             // 
-            this.ct_password.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ct_password.DefaultText = "";
-            this.ct_password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.ct_password.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.ct_password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.ct_password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.ct_password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ct_password.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ct_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ct_password.Location = new System.Drawing.Point(387, 354);
-            this.ct_password.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.ct_password.Name = "ct_password";
-            this.ct_password.PlaceholderText = "Enter Nationality";
-            this.ct_password.SelectedText = "";
-            this.ct_password.Size = new System.Drawing.Size(176, 29);
-            this.ct_password.TabIndex = 28;
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
-            // label14
+            // payBtn
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(385, 277);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(88, 18);
-            this.label14.TabIndex = 29;
-            this.label14.Text = "User Name:";
+            this.payBtn.BorderRadius = 30;
+            this.payBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.payBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.payBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.payBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.payBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.payBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.payBtn.ForeColor = System.Drawing.Color.White;
+            this.payBtn.Location = new System.Drawing.Point(804, 609);
+            this.payBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.payBtn.Name = "payBtn";
+            this.payBtn.Size = new System.Drawing.Size(180, 46);
+            this.payBtn.TabIndex = 31;
+            this.payBtn.Text = "Pay";
+            this.payBtn.Visible = false;
+            this.payBtn.Click += new System.EventHandler(this.payBtn_Click);
             // 
-            // label15
+            // Payment_box
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(387, 333);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(75, 18);
-            this.label15.TabIndex = 30;
-            this.label15.Text = "Password";
+            this.Payment_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Payment_box.DefaultText = "";
+            this.Payment_box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Payment_box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Payment_box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Payment_box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Payment_box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Payment_box.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Payment_box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Payment_box.Location = new System.Drawing.Point(516, 609);
+            this.Payment_box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Payment_box.Name = "Payment_box";
+            this.Payment_box.PlaceholderText = "";
+            this.Payment_box.SelectedText = "";
+            this.Payment_box.Size = new System.Drawing.Size(235, 36);
+            this.Payment_box.TabIndex = 33;
+            this.Payment_box.Visible = false;
+            this.Payment_box.TextChanged += new System.EventHandler(this.Payment_box_TextChanged);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(539, 368);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(142, 22);
+            this.label18.TabIndex = 37;
+            this.label18.Text = "Promo Discount:";
+            // 
+            // Discount_box
+            // 
+            this.Discount_box.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Discount_box.DefaultText = "";
+            this.Discount_box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Discount_box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Discount_box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Discount_box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Discount_box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Discount_box.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Discount_box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Discount_box.Location = new System.Drawing.Point(532, 403);
+            this.Discount_box.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Discount_box.Name = "Discount_box";
+            this.Discount_box.PlaceholderText = "Enter Promo Discount";
+            this.Discount_box.SelectedText = "";
+            this.Discount_box.Size = new System.Drawing.Size(235, 36);
+            this.Discount_box.TabIndex = 39;
+            this.Discount_box.TextChanged += new System.EventHandler(this.Discount_box_TextChanged);
+            // 
+            // DiscountBtn
+            // 
+            this.DiscountBtn.BorderRadius = 30;
+            this.DiscountBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.DiscountBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.DiscountBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.DiscountBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.DiscountBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.DiscountBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DiscountBtn.ForeColor = System.Drawing.Color.White;
+            this.DiscountBtn.Location = new System.Drawing.Point(532, 458);
+            this.DiscountBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DiscountBtn.Name = "DiscountBtn";
+            this.DiscountBtn.Size = new System.Drawing.Size(180, 46);
+            this.DiscountBtn.TabIndex = 40;
+            this.DiscountBtn.Text = "Discount";
+            this.DiscountBtn.Click += new System.EventHandler(this.DiscountBtn_Click);
+            // 
+            // paylbl
+            // 
+            this.paylbl.AutoSize = true;
+            this.paylbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paylbl.Location = new System.Drawing.Point(523, 565);
+            this.paylbl.Name = "paylbl";
+            this.paylbl.Size = new System.Drawing.Size(126, 22);
+            this.paylbl.TabIndex = 41;
+            this.paylbl.Text = "Payment here:";
+            this.paylbl.Visible = false;
+            // 
+            // chgelbl
+            // 
+            this.chgelbl.AutoSize = true;
+            this.chgelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chgelbl.Location = new System.Drawing.Point(512, 678);
+            this.chgelbl.Name = "chgelbl";
+            this.chgelbl.Size = new System.Drawing.Size(69, 22);
+            this.chgelbl.TabIndex = 42;
+            this.chgelbl.Text = "change";
+            this.chgelbl.Visible = false;
             // 
             // UC_CustomerRegistration
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.ct_password);
-            this.Controls.Add(this.ct_username);
+            this.Controls.Add(this.chgelbl);
+            this.Controls.Add(this.paylbl);
+            this.Controls.Add(this.DiscountBtn);
+            this.Controls.Add(this.Discount_box);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.Payment_box);
+            this.Controls.Add(this.payBtn);
             this.Controls.Add(this.ct_rn);
             this.Controls.Add(this.ct_rt);
             this.Controls.Add(this.AllocateBtn);
@@ -545,9 +608,9 @@
             this.Controls.Add(this.checkinTxt);
             this.Controls.Add(this.birthTxt);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_CustomerRegistration";
-            this.Size = new System.Drawing.Size(1347, 683);
+            this.Size = new System.Drawing.Size(1796, 747);
             this.Load += new System.EventHandler(this.UC_CustomerRegistration_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -583,9 +646,14 @@
         private Guna.UI2.WinForms.Guna2Button AllocateBtn;
         private Guna.UI2.WinForms.Guna2ComboBox ct_rt;
         private System.Windows.Forms.ComboBox ct_rn;
-        private Guna.UI2.WinForms.Guna2TextBox ct_password;
-        private Guna.UI2.WinForms.Guna2TextBox ct_username;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private Guna.UI2.WinForms.Guna2Button payBtn;
+        private Guna.UI2.WinForms.Guna2TextBox Payment_box;
+        private System.Windows.Forms.Label label18;
+        private Guna.UI2.WinForms.Guna2TextBox Discount_box;
+        private Guna.UI2.WinForms.Guna2Button DiscountBtn;
+        private System.Windows.Forms.Label paylbl;
+        private System.Windows.Forms.Label chgelbl;
     }
 }

@@ -67,6 +67,11 @@ namespace Ghotel.All_user
         {
             Addroom_Load(this, null);
         }
+
+        private void PriceTexbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

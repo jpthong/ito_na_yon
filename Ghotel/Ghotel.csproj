@@ -99,6 +99,12 @@
     <Compile Include="All user\CustomerCheckOut.Designer.cs">
       <DependentUpon>CustomerCheckOut.cs</DependentUpon>
     </Compile>
+    <Compile Include="All user\CustomerSignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="All user\CustomerSignIn.Designer.cs">
+      <DependentUpon>CustomerSignIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="All user\UC_CustomerRegistration.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="All user\CustomerCheckOut.resx">
       <DependentUpon>CustomerCheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="All user\CustomerSignIn.resx">
+      <DependentUpon>CustomerSignIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="All user\UC_CustomerRegistration.resx">
       <DependentUpon>UC_CustomerRegistration.cs</DependentUpon>

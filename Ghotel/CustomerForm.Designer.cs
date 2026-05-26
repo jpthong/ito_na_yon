@@ -32,9 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerDashboard));
             this.ExitBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.uC_CustomerRegistration1 = new Ghotel.All_user.UC_CustomerRegistration();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.uC_CustomerRegistration1 = new Ghotel.All_user.UC_CustomerRegistration();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,29 +50,40 @@
             this.ExitBtn.Image = ((System.Drawing.Image)(resources.GetObject("ExitBtn.Image")));
             this.ExitBtn.ImageSize = new System.Drawing.Size(100, 100);
             this.ExitBtn.Location = new System.Drawing.Point(-1, -2);
+            this.ExitBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.ExitBtn.Size = new System.Drawing.Size(55, 50);
+            this.ExitBtn.Size = new System.Drawing.Size(73, 62);
             this.ExitBtn.TabIndex = 6;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.uC_CustomerRegistration1);
-            this.panel1.Location = new System.Drawing.Point(-1, 102);
+            this.panel1.Location = new System.Drawing.Point(-1, 126);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1402, 593);
+            this.panel1.Size = new System.Drawing.Size(1869, 730);
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // uC_CustomerRegistration1
+            // 
+            this.uC_CustomerRegistration1.BackColor = System.Drawing.Color.White;
+            this.uC_CustomerRegistration1.Location = new System.Drawing.Point(0, 0);
+            this.uC_CustomerRegistration1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uC_CustomerRegistration1.Name = "uC_CustomerRegistration1";
+            this.uC_CustomerRegistration1.Size = new System.Drawing.Size(1796, 841);
+            this.uC_CustomerRegistration1.TabIndex = 0;
+            this.uC_CustomerRegistration1.Load += new System.EventHandler(this.uC_CustomerRegistration1_Load);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 61);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(24, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(259, 29);
+            this.label1.Size = new System.Drawing.Size(314, 36);
             this.label1.TabIndex = 1;
             this.label1.Text = "Customer Dashboard";
             // 
@@ -81,24 +92,16 @@
             this.guna2Elipse1.BorderRadius = 30;
             this.guna2Elipse1.TargetControl = this;
             // 
-            // uC_CustomerRegistration1
-            // 
-            this.uC_CustomerRegistration1.BackColor = System.Drawing.Color.White;
-            this.uC_CustomerRegistration1.Location = new System.Drawing.Point(0, 2);
-            this.uC_CustomerRegistration1.Margin = new System.Windows.Forms.Padding(2);
-            this.uC_CustomerRegistration1.Name = "uC_CustomerRegistration1";
-            this.uC_CustomerRegistration1.Size = new System.Drawing.Size(1347, 683);
-            this.uC_CustomerRegistration1.TabIndex = 0;
-            // 
             // CustomerDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1314, 601);
+            this.ClientSize = new System.Drawing.Size(1752, 740);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ExitBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CustomerDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerForm";

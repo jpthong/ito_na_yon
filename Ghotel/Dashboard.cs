@@ -20,14 +20,17 @@ namespace Ghotel
 
         private void DsExitBtn_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Form1 form1 = new Form1();
+            form1.Show();
         }
 
         private void CrBtn_Click(object sender, EventArgs e)
         {
+            /*
             Moving_panel.Left = CrBtn.Left+18;
             uC_CustomerRegistration1.Visible = true;
             uC_CustomerRegistration1.BringToFront();
+            */
         }
 
         private void AddrmBtn_Click(object sender, EventArgs e)
@@ -84,6 +87,11 @@ namespace Ghotel
             this.Hide();
             Form1 form1 = new Form1();
             form1.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
         /*
 private void guna2Button3_Click(object sender, EventArgs e)

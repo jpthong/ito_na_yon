@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ghotel.All_user;  
 
 namespace Ghotel
 {
@@ -14,9 +15,12 @@ namespace Ghotel
     {
         function fn = new function();
         string query;
+
         public Form1()
         {
             InitializeComponent();
+            PassTextBox.KeyPress += PassTextBox_KeyPress;
+            this.AcceptButton = LoginBtn; 
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)
@@ -26,9 +30,11 @@ namespace Ghotel
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
+
             // Admin hardcoded
             if (UserTextbox.Text == "admin" && PassTextBox.Text == "admin123")
             {
+               
                 Errorlbl.Visible = false;
                 Dashboard dash = new Dashboard();
                 this.Hide();
@@ -59,6 +65,7 @@ namespace Ghotel
             {
                 Errorlbl.Visible = false;
                 CustomerRoomView cd = new CustomerRoomView(UserTextbox.Text);
+
                 this.Hide();
                 cd.Show();
                 return;
@@ -76,11 +83,58 @@ namespace Ghotel
 
         private void customerSignUp_Click(object sender, EventArgs e)
         {
+                CustomerSignIn csi = new CustomerSignIn();
+                this.Hide();
+                csi.Show();
+            /*
             Errorlbl.Visible = false;
             CustomerDashboard cd = new CustomerDashboard();
             this.Hide();
             cd.Show();
             return;
+            */
+        }
+
+        private void Errorlbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PassTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PassTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                LoginBtn_Click(sender, e);
+            }
+        }
+
+        private void UserTextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void regist_Click(object sender, EventArgs e)
+        {
+            {
+                Form wrapper = new Form();
+                wrapper.WindowState = FormWindowState.Maximized;
+                wrapper.Text = "Customer Registration";
+
+                UC_CustomerRegistration uc = new UC_CustomerRegistration();
+                uc.Dock = DockStyle.Fill;
+                wrapper.Controls.Add(uc);
+
+                this.Hide();
+                wrapper.Show();
+            }
+
+
         }
     }
 }

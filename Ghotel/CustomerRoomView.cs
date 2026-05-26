@@ -46,5 +46,10 @@ namespace Ghotel
         {
 
         }
+
+        private void uC_CustomerRoomView1_Load_2(object sender, EventArgs e)
+        {
+
+        }
     }
 }

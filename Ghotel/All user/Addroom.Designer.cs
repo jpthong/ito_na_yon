@@ -180,6 +180,7 @@
             this.PriceTexbox.Size = new System.Drawing.Size(451, 37);
             this.PriceTexbox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.PriceTexbox.TabIndex = 9;
+            this.PriceTexbox.TextChanged += new System.EventHandler(this.PriceTexbox_TextChanged);
             // 
             // label5
             // 
