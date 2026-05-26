@@ -57,8 +57,6 @@ namespace Ghotel.All_user
 
                     query = "update customer set checkout='YES', checkoutdate='" + cdate + "' where cid=" + id + "; update addrooms set booked='NO' where room_number='" + CheckoutRoomNumber.Text + "'";
                     fn.setData(query, "Customer checked out successfully.");
-                    query = "Delete from customer where cid=" + id ;
-                    fn.setData(query, "Customer record deleted successfully.");
                     CustomerCheckOut_Load(this, null);
                     clearAll();
                 }
@@ -90,6 +88,16 @@ namespace Ghotel.All_user
                 listName.Text = CheckoutGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
                 CheckoutRoomNumber.Text = CheckoutGrid.Rows[e.RowIndex].Cells[9].Value.ToString();
             }
+        }
+
+        private void CheckoutGrid_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void CheckoutRoomNumber_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

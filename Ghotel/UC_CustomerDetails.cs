@@ -30,32 +30,29 @@ namespace Ghotel
 
         private void cb_SortBy_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string baseQuery = "SELECT cid, cname, mobile, nationality, gender, dob, idproof, " +
+                               "address, checkin, checkout, checkoutdate, room_type, bed, price " +
+                               "FROM customer INNER JOIN addrooms ON customer.room_id = addrooms.room_id";
+
             if (cb_SortBy.SelectedIndex == 0)
             {
-                query = "select cid, cname, mobile, nationality, gender, dob, idproof," +
-                    " address, checkin, checkout, room_type, bed, " +
-                    "price from customer inner join addrooms on customer.room_id = addrooms.room_id";
-                DataSet ds = fn.getData(query);
-                guna2DataGridView1.DataSource = ds.Tables[0];
+                query = baseQuery; // All customers
             }
-
             else if (cb_SortBy.SelectedIndex == 1)
             {
-                query = "select cid, cname, mobile, nationality, gender, dob, idproof," +
-                    " address, checkin, checkout, room_type, bed, " +
-                    "price from customer inner join addrooms on customer.room_id = addrooms.room_id where checkout = 'NO'";
-                DataSet ds = fn.getData(query);
-                guna2DataGridView1.DataSource = ds.Tables[0];
+                query = baseQuery + " WHERE checkout = 'NO'"; // Currently checked in
             }
-
             else if (cb_SortBy.SelectedIndex == 2)
             {
-                query = "select cid, cname, mobile, nationality, gender, dob, idproof," +
-                    " address, checkin, checkout, room_type, bed, " +
-                    "price from customer inner join addrooms on customer.room_id = addrooms.room_id where checkout  = 'YES'";
-                DataSet ds = fn.getData(query);
-                guna2DataGridView1.DataSource = ds.Tables[0];
+                query = baseQuery + " WHERE checkout = 'YES'"; // Checked out
             }
+
+            DataSet ds = fn.getData(query);
+            guna2DataGridView1.DataSource = ds.Tables[0];
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

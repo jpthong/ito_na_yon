@@ -1,6 +1,10 @@
-﻿using Npgsql;
+﻿using AForge.Video;
+using AForge.Video.DirectShow;
+using Npgsql;
 using System;
 using System.Data;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Printing;
@@ -9,6 +13,10 @@ namespace Ghotel.All_user
 {
     public partial class UC_CustomerRegistration : UserControl
     {
+        private FilterInfoCollection cameras;
+        private VideoCaptureDevice camera;
+        private string capturedImagePath = "";
+
         function fn = new function();
         long roomId;
         String query;
@@ -57,10 +65,19 @@ namespace Ghotel.All_user
         {
             ct_rn.Items.Clear();
             ct_pr.Clear();
-            query = "SELECT room_number FROM addrooms WHERE bed = '" + ct_bed.Text.Trim() + "' AND room_type = '" + ct_rt.Text.Trim() + "' AND booked = 'NO'";
+
+            query = "SELECT room_number FROM addrooms WHERE bed = '" +
+                    ct_bed.Text.Trim() +
+                    "' AND room_type = '" +
+                    ct_rt.Text.Trim() +
+                    "' AND booked = 'NO'";
+
             setComboBox(query, ct_rn);
         }
 
+        // =====================================================
+        // BED TYPE
+        // =====================================================
         private void ct_bed_SelectedIndexChanged(object sender, EventArgs e)
         {
             ct_rt.SelectedIndex = -1;
@@ -69,9 +86,10 @@ namespace Ghotel.All_user
 
         private void ct_rn_SelectedIndexChanged(object sender, EventArgs e)
         {
-            query = "SELECT price, room_id FROM addrooms WHERE room_number = " + ct_rn.Text.Trim();
             DataSet ds = fn.getData(query);
+
             ct_pr.Text = ds.Tables[0].Rows[0][0].ToString();
+
             rid = long.Parse(ds.Tables[0].Rows[0][1].ToString());
 
             computeTotal();
@@ -126,7 +144,6 @@ namespace Ghotel.All_user
                 computeTotal();
 
                 String cname = ct_name.Text;
-                Int64 contact = Int64.Parse(ct_no.Text);
                 String nation = ct_nation.Text;
                 String gender = ct_gen.Text;
                 String dob = birthTxt.Value.ToString("yyyy-MM-dd");
@@ -186,12 +203,41 @@ namespace Ghotel.All_user
                 DiscountBtn.Enabled = false;
                 Discount_box.Enabled = false;
             }
-            else
-            {
-                MessageBox.Show("Please fill all the fields.", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            camera = new VideoCaptureDevice(cameras[0].MonikerString);
+
+            camera.NewFrame += Camera_NewFrame;
+
+            camera.Start();
         }
+
+        // =====================================================
+        // CAPTURE FACE
+        // =====================================================
+        private void captureBtn_Click(object sender, EventArgs e)
+        {
+            if (ct_name.Text == "" ||
+        ct_username.Text == "" ||
+        ct_no.Text == "")
+            {
+                MessageBox.Show(
+                    "Please fill in Name, Username, and Contact Number first.",
+                    "Required Fields",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+
+                return;
+            }
+
+            // CHECK CAMERA IMAGE
+            if (pictureBox.Image == null)
+            {
+                MessageBox.Show(
+                    "No camera image detected. Please open the camera first."
+                );
+
+                return;
+            }
 
         private void payBtn_Click(object sender, EventArgs e)
         {

@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+<<<<<<< Updated upstream
+=======
+            this.verifyFaceBtn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+>>>>>>> Stashed changes
             this.customerSignUp = new Guna.UI2.WinForms.Guna2Button();
             this.ExitBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.Errorlbl = new System.Windows.Forms.Label();
@@ -38,14 +43,27 @@
             this.UserTextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+<<<<<<< Updated upstream
             this.regist = new Guna.UI2.WinForms.Guna2Button();
+=======
+            this.openCameraBtn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+>>>>>>> Stashed changes
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+<<<<<<< Updated upstream
             this.panel1.Controls.Add(this.regist);
+=======
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.openCameraBtn);
+            this.panel1.Controls.Add(this.verifyFaceBtn);
+            this.panel1.Controls.Add(this.pictureBox1);
+>>>>>>> Stashed changes
             this.panel1.Controls.Add(this.customerSignUp);
             this.panel1.Controls.Add(this.ExitBtn);
             this.panel1.Controls.Add(this.Errorlbl);
@@ -60,6 +78,30 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+<<<<<<< Updated upstream
+=======
+            // verifyFaceBtn
+            // 
+            this.verifyFaceBtn.Location = new System.Drawing.Point(256, 500);
+            this.verifyFaceBtn.Name = "verifyFaceBtn";
+            this.verifyFaceBtn.Size = new System.Drawing.Size(199, 44);
+            this.verifyFaceBtn.TabIndex = 8;
+            this.verifyFaceBtn.Text = "Login With Face";
+            this.verifyFaceBtn.UseVisualStyleBackColor = true;
+            this.verifyFaceBtn.Click += new System.EventHandler(this.verifyFaceBtn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(256, 166);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(563, 314);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+>>>>>>> Stashed changes
             // customerSignUp
             // 
             this.customerSignUp.BorderRadius = 22;
@@ -69,7 +111,11 @@
             this.customerSignUp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.customerSignUp.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customerSignUp.ForeColor = System.Drawing.Color.White;
+<<<<<<< Updated upstream
             this.customerSignUp.Location = new System.Drawing.Point(663, 449);
+=======
+            this.customerSignUp.Location = new System.Drawing.Point(942, 481);
+>>>>>>> Stashed changes
             this.customerSignUp.Name = "customerSignUp";
             this.customerSignUp.Size = new System.Drawing.Size(266, 45);
             this.customerSignUp.TabIndex = 6;
@@ -100,7 +146,7 @@
             this.Errorlbl.BackColor = System.Drawing.Color.White;
             this.Errorlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Errorlbl.ForeColor = System.Drawing.Color.Red;
-            this.Errorlbl.Location = new System.Drawing.Point(696, 521);
+            this.Errorlbl.Location = new System.Drawing.Point(975, 553);
             this.Errorlbl.Name = "Errorlbl";
             this.Errorlbl.Size = new System.Drawing.Size(215, 18);
             this.Errorlbl.TabIndex = 4;
@@ -117,7 +163,7 @@
             this.LoginBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.LoginBtn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginBtn.ForeColor = System.Drawing.Color.White;
-            this.LoginBtn.Location = new System.Drawing.Point(663, 384);
+            this.LoginBtn.Location = new System.Drawing.Point(942, 416);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(266, 45);
             this.LoginBtn.TabIndex = 3;
@@ -141,7 +187,7 @@
             this.PassTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.PassTextBox.IconRight = ((System.Drawing.Image)(resources.GetObject("PassTextBox.IconRight")));
             this.PassTextBox.IconRightSize = new System.Drawing.Size(40, 40);
-            this.PassTextBox.Location = new System.Drawing.Point(640, 314);
+            this.PassTextBox.Location = new System.Drawing.Point(919, 346);
             this.PassTextBox.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.PassTextBox.Name = "PassTextBox";
             this.PassTextBox.PasswordChar = '*';
@@ -168,7 +214,7 @@
             this.UserTextbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.UserTextbox.IconRight = ((System.Drawing.Image)(resources.GetObject("UserTextbox.IconRight")));
             this.UserTextbox.IconRightSize = new System.Drawing.Size(40, 40);
-            this.UserTextbox.Location = new System.Drawing.Point(640, 226);
+            this.UserTextbox.Location = new System.Drawing.Point(919, 258);
             this.UserTextbox.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.UserTextbox.Name = "UserTextbox";
             this.UserTextbox.PlaceholderText = "Username";
@@ -182,7 +228,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(701, 118);
+            this.label1.Location = new System.Drawing.Point(980, 150);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(210, 51);
@@ -204,6 +250,7 @@
             this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+<<<<<<< Updated upstream
             // regist
             // 
             this.regist.BorderRadius = 22;
@@ -219,6 +266,29 @@
             this.regist.TabIndex = 7;
             this.regist.Text = "Regist";
             this.regist.Click += new System.EventHandler(this.regist_Click);
+=======
+            // openCameraBtn
+            // 
+            this.openCameraBtn.Location = new System.Drawing.Point(620, 500);
+            this.openCameraBtn.Name = "openCameraBtn";
+            this.openCameraBtn.Size = new System.Drawing.Size(199, 44);
+            this.openCameraBtn.TabIndex = 9;
+            this.openCameraBtn.Text = "Open Camera";
+            this.openCameraBtn.UseVisualStyleBackColor = true;
+            this.openCameraBtn.Click += new System.EventHandler(this.openCameraBtn_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Honeydew;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.IndianRed;
+            this.label2.Location = new System.Drawing.Point(631, 547);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(173, 30);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Click the Open Camera button \r\nagain if the camera fails";
+>>>>>>> Stashed changes
             // 
             // Form1
             // 
@@ -237,6 +307,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -252,7 +323,14 @@
         private System.Windows.Forms.Label Errorlbl;
         private Guna.UI2.WinForms.Guna2CircleButton ExitBtn;
         private Guna.UI2.WinForms.Guna2Button customerSignUp;
+<<<<<<< Updated upstream
         private Guna.UI2.WinForms.Guna2Button regist;
+=======
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button verifyFaceBtn;
+        private System.Windows.Forms.Button openCameraBtn;
+        private System.Windows.Forms.Label label2;
+>>>>>>> Stashed changes
     }
 }
 
