@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Ghotel.All_user
 {
@@ -61,7 +61,6 @@ namespace Ghotel.All_user
             this.AllocateBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ct_rt = new Guna.UI2.WinForms.Guna2ComboBox();
             this.ct_rn = new System.Windows.Forms.ComboBox();
-<<<<<<< Updated upstream
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.payBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -71,7 +70,6 @@ namespace Ghotel.All_user
             this.DiscountBtn = new Guna.UI2.WinForms.Guna2Button();
             this.paylbl = new System.Windows.Forms.Label();
             this.chgelbl = new System.Windows.Forms.Label();
-=======
             this.ct_username = new Guna.UI2.WinForms.Guna2TextBox();
             this.ct_password = new Guna.UI2.WinForms.Guna2TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -80,7 +78,6 @@ namespace Ghotel.All_user
             this.startCameraBtn = new System.Windows.Forms.Button();
             this.captureBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
->>>>>>> Stashed changes
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -118,13 +115,8 @@ namespace Ghotel.All_user
             this.checkinTxt.Checked = true;
             this.checkinTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.checkinTxt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-<<<<<<< Updated upstream
             this.checkinTxt.Location = new System.Drawing.Point(516, 278);
             this.checkinTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-=======
-            this.checkinTxt.Location = new System.Drawing.Point(282, 228);
-            this.checkinTxt.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.checkinTxt.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.checkinTxt.MinDate = new System.DateTime(2026, 5, 26, 0, 0, 0, 0);
             this.checkinTxt.Name = "checkinTxt";
@@ -177,12 +169,7 @@ namespace Ghotel.All_user
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< Updated upstream
             this.label6.Location = new System.Drawing.Point(513, 92);
-=======
-            this.label6.Location = new System.Drawing.Point(280, 77);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
->>>>>>> Stashed changes
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 22);
             this.label6.TabIndex = 6;
@@ -192,12 +179,7 @@ namespace Ghotel.All_user
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< Updated upstream
             this.label7.Location = new System.Drawing.Point(516, 180);
-=======
-            this.label7.Location = new System.Drawing.Point(282, 148);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
->>>>>>> Stashed changes
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 22);
             this.label7.TabIndex = 6;
@@ -207,12 +189,7 @@ namespace Ghotel.All_user
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< Updated upstream
             this.label8.Location = new System.Drawing.Point(533, 254);
-=======
-            this.label8.Location = new System.Drawing.Point(295, 208);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
->>>>>>> Stashed changes
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 22);
             this.label8.TabIndex = 6;
@@ -222,12 +199,7 @@ namespace Ghotel.All_user
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< Updated upstream
             this.label9.Location = new System.Drawing.Point(965, 90);
-=======
-            this.label9.Location = new System.Drawing.Point(527, 73);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
->>>>>>> Stashed changes
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(47, 22);
             this.label9.TabIndex = 6;
@@ -237,12 +209,7 @@ namespace Ghotel.All_user
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< Updated upstream
             this.label10.Location = new System.Drawing.Point(965, 180);
-=======
-            this.label10.Location = new System.Drawing.Point(527, 146);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
->>>>>>> Stashed changes
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(108, 22);
             this.label10.TabIndex = 6;
@@ -252,12 +219,7 @@ namespace Ghotel.All_user
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< Updated upstream
             this.label11.Location = new System.Drawing.Point(965, 268);
-=======
-            this.label11.Location = new System.Drawing.Point(527, 218);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
->>>>>>> Stashed changes
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(90, 22);
             this.label11.TabIndex = 6;
@@ -267,12 +229,7 @@ namespace Ghotel.All_user
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< Updated upstream
             this.label12.Location = new System.Drawing.Point(965, 356);
-=======
-            this.label12.Location = new System.Drawing.Point(527, 289);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
->>>>>>> Stashed changes
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(56, 22);
             this.label12.TabIndex = 6;
@@ -357,13 +314,8 @@ namespace Ghotel.All_user
             this.ct_id.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ct_id.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ct_id.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-<<<<<<< Updated upstream
             this.ct_id.Location = new System.Drawing.Point(517, 118);
             this.ct_id.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-=======
-            this.ct_id.Location = new System.Drawing.Point(283, 98);
-            this.ct_id.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
->>>>>>> Stashed changes
             this.ct_id.Name = "ct_id";
             this.ct_id.PlaceholderText = "Enter ID";
             this.ct_id.SelectedText = "";
@@ -382,13 +334,8 @@ namespace Ghotel.All_user
             this.ct_pr.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ct_pr.ForeColor = System.Drawing.Color.Black;
             this.ct_pr.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-<<<<<<< Updated upstream
             this.ct_pr.Location = new System.Drawing.Point(971, 382);
             this.ct_pr.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-=======
-            this.ct_pr.Location = new System.Drawing.Point(531, 310);
-            this.ct_pr.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
->>>>>>> Stashed changes
             this.ct_pr.Name = "ct_pr";
             this.ct_pr.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.ct_pr.PlaceholderText = "Price";
@@ -429,13 +376,8 @@ namespace Ghotel.All_user
             this.ct_address.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ct_address.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ct_address.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-<<<<<<< Updated upstream
             this.ct_address.Location = new System.Drawing.Point(520, 213);
             this.ct_address.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-=======
-            this.ct_address.Location = new System.Drawing.Point(285, 175);
-            this.ct_address.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
->>>>>>> Stashed changes
             this.ct_address.Name = "ct_address";
             this.ct_address.PlaceholderText = "Enter Full Address";
             this.ct_address.SelectedText = "";
@@ -456,13 +398,8 @@ namespace Ghotel.All_user
             "Single bed",
             "Double bed",
             "Triple bed"});
-<<<<<<< Updated upstream
             this.ct_bed.Location = new System.Drawing.Point(969, 118);
             this.ct_bed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-=======
-            this.ct_bed.Location = new System.Drawing.Point(530, 96);
-            this.ct_bed.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.ct_bed.Name = "ct_bed";
             this.ct_bed.Size = new System.Drawing.Size(235, 36);
             this.ct_bed.TabIndex = 23;
@@ -478,13 +415,8 @@ namespace Ghotel.All_user
             this.AllocateBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.AllocateBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AllocateBtn.ForeColor = System.Drawing.Color.White;
-<<<<<<< Updated upstream
             this.AllocateBtn.Location = new System.Drawing.Point(971, 458);
             this.AllocateBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-=======
-            this.AllocateBtn.Location = new System.Drawing.Point(531, 372);
-            this.AllocateBtn.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.AllocateBtn.Name = "AllocateBtn";
             this.AllocateBtn.Size = new System.Drawing.Size(180, 46);
             this.AllocateBtn.TabIndex = 24;
@@ -505,13 +437,8 @@ namespace Ghotel.All_user
             "econo",
             "premium",
             "deluxe"});
-<<<<<<< Updated upstream
             this.ct_rt.Location = new System.Drawing.Point(971, 215);
             this.ct_rt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-=======
-            this.ct_rt.Location = new System.Drawing.Point(531, 175);
-            this.ct_rt.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.ct_rt.Name = "ct_rt";
             this.ct_rt.Size = new System.Drawing.Size(235, 36);
             this.ct_rt.TabIndex = 25;
@@ -520,13 +447,8 @@ namespace Ghotel.All_user
             // ct_rn
             // 
             this.ct_rn.FormattingEnabled = true;
-<<<<<<< Updated upstream
             this.ct_rn.Location = new System.Drawing.Point(971, 306);
             this.ct_rn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-=======
-            this.ct_rn.Location = new System.Drawing.Point(531, 249);
-            this.ct_rn.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> Stashed changes
             this.ct_rn.Name = "ct_rn";
             this.ct_rn.Size = new System.Drawing.Size(235, 24);
             this.ct_rn.TabIndex = 26;
@@ -534,9 +456,20 @@ namespace Ghotel.All_user
             // 
             // printDocument1
             // 
-<<<<<<< Updated upstream
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
-=======
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // ct_username
+            // 
             this.ct_username.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ct_username.DefaultText = "";
             this.ct_username.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -549,24 +482,14 @@ namespace Ghotel.All_user
             this.ct_username.Location = new System.Drawing.Point(282, 300);
             this.ct_username.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ct_username.Name = "ct_username";
-            this.ct_username.PlaceholderText = "Enter Nationality";
+            this.ct_username.PlaceholderText = "Enter Username";
             this.ct_username.SelectedText = "";
             this.ct_username.Size = new System.Drawing.Size(176, 29);
             this.ct_username.TabIndex = 27;
             this.ct_username.TextChanged += new System.EventHandler(this.ct_username_TextChanged);
->>>>>>> Stashed changes
             // 
-            // printPreviewDialog1
+            // ct_password
             // 
-<<<<<<< Updated upstream
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
-=======
             this.ct_password.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ct_password.DefaultText = "";
             this.ct_password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -579,15 +502,35 @@ namespace Ghotel.All_user
             this.ct_password.Location = new System.Drawing.Point(282, 356);
             this.ct_password.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ct_password.Name = "ct_password";
-            this.ct_password.PlaceholderText = "Enter Nationality";
+            this.ct_password.PlaceholderText = "Enter Password";
             this.ct_password.SelectedText = "";
             this.ct_password.Size = new System.Drawing.Size(176, 29);
             this.ct_password.TabIndex = 28;
->>>>>>> Stashed changes
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(280, 279);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(88, 18);
+            this.label14.TabIndex = 29;
+            this.label14.Text = "User Name:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(282, 335);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(75, 18);
+            this.label15.TabIndex = 30;
+            this.label15.Text = "Password";
             // 
             // payBtn
             // 
-<<<<<<< Updated upstream
             this.payBtn.BorderRadius = 30;
             this.payBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.payBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -604,20 +547,9 @@ namespace Ghotel.All_user
             this.payBtn.Text = "Pay";
             this.payBtn.Visible = false;
             this.payBtn.Click += new System.EventHandler(this.payBtn_Click);
-=======
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(280, 279);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(88, 18);
-            this.label14.TabIndex = 29;
-            this.label14.Text = "User Name:";
->>>>>>> Stashed changes
             // 
             // Payment_box
             // 
-<<<<<<< Updated upstream
             this.Payment_box.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Payment_box.DefaultText = "";
             this.Payment_box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -706,16 +638,6 @@ namespace Ghotel.All_user
             this.chgelbl.TabIndex = 42;
             this.chgelbl.Text = "change";
             this.chgelbl.Visible = false;
-=======
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(282, 335);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(75, 18);
-            this.label15.TabIndex = 30;
-            this.label15.Text = "Password";
->>>>>>> Stashed changes
             // 
             // pictureBox
             // 
@@ -751,7 +673,6 @@ namespace Ghotel.All_user
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-<<<<<<< Updated upstream
             this.Controls.Add(this.chgelbl);
             this.Controls.Add(this.paylbl);
             this.Controls.Add(this.DiscountBtn);
@@ -759,7 +680,6 @@ namespace Ghotel.All_user
             this.Controls.Add(this.label18);
             this.Controls.Add(this.Payment_box);
             this.Controls.Add(this.payBtn);
-=======
             this.Controls.Add(this.captureBtn);
             this.Controls.Add(this.startCameraBtn);
             this.Controls.Add(this.pictureBox);
@@ -767,7 +687,6 @@ namespace Ghotel.All_user
             this.Controls.Add(this.label14);
             this.Controls.Add(this.ct_password);
             this.Controls.Add(this.ct_username);
->>>>>>> Stashed changes
             this.Controls.Add(this.ct_rn);
             this.Controls.Add(this.ct_rt);
             this.Controls.Add(this.AllocateBtn);
@@ -833,7 +752,6 @@ namespace Ghotel.All_user
         private Guna.UI2.WinForms.Guna2Button AllocateBtn;
         private Guna.UI2.WinForms.Guna2ComboBox ct_rt;
         private System.Windows.Forms.ComboBox ct_rn;
-<<<<<<< Updated upstream
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private Guna.UI2.WinForms.Guna2Button payBtn;
@@ -843,7 +761,6 @@ namespace Ghotel.All_user
         private Guna.UI2.WinForms.Guna2Button DiscountBtn;
         private System.Windows.Forms.Label paylbl;
         private System.Windows.Forms.Label chgelbl;
-=======
         private Guna.UI2.WinForms.Guna2TextBox ct_password;
         private Guna.UI2.WinForms.Guna2TextBox ct_username;
         private System.Windows.Forms.Label label15;
@@ -851,6 +768,5 @@ namespace Ghotel.All_user
         private System.Windows.Forms.Button captureBtn;
         private System.Windows.Forms.Button startCameraBtn;
         private System.Windows.Forms.PictureBox pictureBox;
->>>>>>> Stashed changes
     }
 }
