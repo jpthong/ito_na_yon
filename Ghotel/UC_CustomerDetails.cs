@@ -25,7 +25,7 @@ namespace Ghotel
 
         private void UC_CustomerDetails_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void cb_SortBy_SelectedIndexChanged(object sender, EventArgs e)

@@ -12,7 +12,7 @@ using System.Net.Http;
 using AForge.Video;
 using AForge.Video.DirectShow;
 using Newtonsoft.Json;
-using Ghotel.All_user;  
+using Ghotel.All_user;
 
 namespace Ghotel
 {
@@ -22,12 +22,13 @@ namespace Ghotel
         private VideoCaptureDevice camera;
         function fn = new function();
         string query;
+        private readonly object _cameraLock = new object();
 
         public Form1()
         {
             InitializeComponent();
             PassTextBox.KeyPress += PassTextBox_KeyPress;
-            this.AcceptButton = LoginBtn; 
+            this.AcceptButton = LoginBtn;
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)
@@ -42,18 +43,14 @@ namespace Ghotel
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-
-            // Admin hardcoded
             if (UserTextbox.Text == "admin" && PassTextBox.Text == "admin123")
             {
-               
                 Errorlbl.Visible = false;
                 Dashboard dash = new Dashboard();
                 this.Hide();
                 dash.Show();
                 return;
             }
-
 
             query = "select * from employee where emp_username = '"
                   + UserTextbox.Text + "' and emp_password = '" + PassTextBox.Text + "'";
@@ -68,7 +65,6 @@ namespace Ghotel
                 return;
             }
 
-
             query = "select * from customer where cust_username = '"
                   + UserTextbox.Text + "' and cust_password = '" + PassTextBox.Text + "'";
             DataSet ds2 = fn.getData(query);
@@ -77,33 +73,22 @@ namespace Ghotel
             {
                 Errorlbl.Visible = false;
                 CustomerRoomView cd = new CustomerRoomView(UserTextbox.Text);
-
                 this.Hide();
                 cd.Show();
                 return;
             }
 
-            // Nothing matched
             Errorlbl.Visible = true;
             PassTextBox.Clear();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        private void panel1_Paint(object sender, PaintEventArgs e) { }
 
         private void customerSignUp_Click(object sender, EventArgs e)
         {
-                CustomerSignIn csi = new CustomerSignIn();
-                this.Hide();
-                csi.Show();
-            /*
-            Errorlbl.Visible = false;
-            CustomerDashboard cd = new CustomerDashboard();
+            CustomerSignIn csi = new CustomerSignIn();
             this.Hide();
-            cd.Show();
-            return;
+            csi.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -127,16 +112,9 @@ namespace Ghotel
                 return;
             }
 
-
-            // Start camera
-            camera = new VideoCaptureDevice(cameras[0].MonikerString);
-            camera.NewFrame += FaceLogin_NewFrame;
-
-
             verifyFaceBtn.Text = "Get Ready...";
             verifyFaceBtn.Enabled = false;
 
-            // 3 second countdown
             for (int i = 3; i >= 1; i--)
             {
                 verifyFaceBtn.Text = "Capturing in " + i;
@@ -144,16 +122,38 @@ namespace Ghotel
             }
 
             verifyFaceBtn.Text = "Verifying...";
-            // Capture and verify face
             await CaptureAndVerify();
 
-            // Restore button
             verifyFaceBtn.Text = "Login with Face";
             verifyFaceBtn.Enabled = true;
         }
+
         private void FaceLogin_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
-            Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
+            try
+            {
+                lock (_cameraLock)
+                {
+                    if (eventArgs.Frame == null) return;
+
+                    Bitmap bitmapClone = new Bitmap(eventArgs.Frame);
+                    bitmapClone.RotateFlip(RotateFlipType.RotateNoneFlipX);
+
+                    if (pictureBox1.InvokeRequired)
+                    {
+                        pictureBox1.BeginInvoke(new MethodInvoker(() => UpdatePictureBox1(bitmapClone)));
+                    }
+                    else
+                    {
+                        UpdatePictureBox1(bitmapClone);
+                    }
+                }
+            }
+            catch (Exception) { }
+        }
+
+        private void UpdatePictureBox1(Bitmap bitmap)
+        {
             pictureBox1.Image?.Dispose();
             pictureBox1.Image = bitmap;
         }
@@ -170,16 +170,25 @@ namespace Ghotel
 
                 string tempPath = Path.Combine(Path.GetTempPath(), "verify_temp.jpg");
 
-                if (pictureBox1.Image == null)
+                Bitmap snapshot = null;
+                lock (_cameraLock)
                 {
-                    MessageBox.Show("No image captured yet. Please try again.");
-                    RestartCamera(); // <-- restart
-                    verifyFaceBtn.Text = "Login with Face";
-                    verifyFaceBtn.Enabled = true;
-                    return;
+                    if (pictureBox1.Image == null)
+                    {
+                        MessageBox.Show("No image captured yet. Please try again.");
+                        RestartCamera();
+                        verifyFaceBtn.Text = "Login with Face";
+                        verifyFaceBtn.Enabled = true;
+                        return;
+                    }
+
+                    snapshot = new Bitmap(pictureBox1.Image.Width, pictureBox1.Image.Height);
+                    using (Graphics g = Graphics.FromImage(snapshot))
+                    {
+                        g.DrawImage(pictureBox1.Image, 0, 0);
+                    }
                 }
 
-                Bitmap snapshot = new Bitmap(pictureBox1.Image);
                 snapshot.Save(tempPath);
 
                 using (HttpClient client = new HttpClient())
@@ -210,20 +219,20 @@ namespace Ghotel
                         else
                         {
                             MessageBox.Show("Face recognized but no account found. Please remove your eyeglasses, hat, or mask and try again.");
-                            RestartCamera(); // <-- restart
+                            RestartCamera();
                         }
                     }
                     else
                     {
                         MessageBox.Show("Face not recognized. Please try again.");
-                        RestartCamera(); // <-- restart
+                        RestartCamera();
                     }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
-                RestartCamera(); // <-- restart
+                RestartCamera();
             }
         }
 
@@ -242,11 +251,6 @@ namespace Ghotel
             camera.Start();
         }
 
-        private void Errorlbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void RestartCamera()
         {
             try
@@ -263,50 +267,32 @@ namespace Ghotel
                 MessageBox.Show("Could not restart camera: " + ex.Message);
             }
         }
-            return;
-            */
-        }
 
-        private void Errorlbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PassTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        private void Errorlbl_Click(object sender, EventArgs e) { }
+        private void PassTextBox_TextChanged(object sender, EventArgs e) { }
 
         private void PassTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-
             if (e.KeyChar == (char)Keys.Enter)
             {
                 LoginBtn_Click(sender, e);
             }
         }
 
-        private void UserTextbox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        private void UserTextbox_TextChanged(object sender, EventArgs e) { }
 
         private void regist_Click(object sender, EventArgs e)
         {
-            {
-                Form wrapper = new Form();
-                wrapper.WindowState = FormWindowState.Maximized;
-                wrapper.Text = "Customer Registration";
+            Form wrapper = new Form();
+            wrapper.WindowState = FormWindowState.Maximized;
+            wrapper.Text = "Customer Registration";
 
-                UC_CustomerRegistration uc = new UC_CustomerRegistration();
-                uc.Dock = DockStyle.Fill;
-                wrapper.Controls.Add(uc);
+            UC_CustomerRegistration uc = new UC_CustomerRegistration();
+            uc.Dock = DockStyle.Fill;
+            wrapper.Controls.Add(uc);
 
-                this.Hide();
-                wrapper.Show();
-            }
-
-
+            this.Hide();
+            wrapper.Show();
         }
     }
 }

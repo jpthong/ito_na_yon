@@ -58,10 +58,10 @@
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label11 = new System.Windows.Forms.Label();
-            this.tb_emp_id = new Guna.UI2.WinForms.Guna2TextBox();
-            this.deleteBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.deleteBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.tb_emp_id = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.tabEmployee.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -91,7 +91,7 @@
             this.tabEmployee.Controls.Add(this.tabPage1);
             this.tabEmployee.Controls.Add(this.tabPage2);
             this.tabEmployee.Controls.Add(this.tabPage3);
-            this.tabEmployee.Location = new System.Drawing.Point(170, 145);
+            this.tabEmployee.Location = new System.Drawing.Point(143, 120);
             this.tabEmployee.Name = "tabEmployee";
             this.tabEmployee.SelectedIndex = 0;
             this.tabEmployee.Size = new System.Drawing.Size(1027, 430);
@@ -436,54 +436,6 @@
             this.tabPage3.Text = "Remove Employee";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(63, 78);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(26, 20);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "ID";
-            // 
-            // tb_emp_id
-            // 
-            this.tb_emp_id.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_emp_id.DefaultText = "";
-            this.tb_emp_id.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tb_emp_id.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tb_emp_id.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_emp_id.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tb_emp_id.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_emp_id.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tb_emp_id.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tb_emp_id.Location = new System.Drawing.Point(67, 101);
-            this.tb_emp_id.Name = "tb_emp_id";
-            this.tb_emp_id.PlaceholderText = "Enter ID";
-            this.tb_emp_id.SelectedText = "";
-            this.tb_emp_id.Size = new System.Drawing.Size(200, 36);
-            this.tb_emp_id.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.tb_emp_id.TabIndex = 2;
-            // 
-            // deleteBtn
-            // 
-            this.deleteBtn.BorderRadius = 26;
-            this.deleteBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            this.deleteBtn.CheckedState.ForeColor = System.Drawing.Color.Crimson;
-            this.deleteBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.deleteBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.deleteBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.deleteBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.deleteBtn.FillColor = System.Drawing.Color.IndianRed;
-            this.deleteBtn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteBtn.ForeColor = System.Drawing.Color.White;
-            this.deleteBtn.Location = new System.Drawing.Point(287, 101);
-            this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(112, 36);
-            this.deleteBtn.TabIndex = 15;
-            this.deleteBtn.Text = "Delete";
-            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
-            // 
             // guna2DataGridView2
             // 
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
@@ -497,7 +449,8 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.guna2DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.guna2DataGridView2.ColumnHeadersHeight = 4;
+            this.guna2DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -523,7 +476,7 @@
             this.guna2DataGridView2.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.guna2DataGridView2.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2DataGridView2.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.guna2DataGridView2.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2DataGridView2.ThemeStyle.HeaderStyle.Height = 4;
             this.guna2DataGridView2.ThemeStyle.ReadOnly = false;
             this.guna2DataGridView2.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -534,6 +487,54 @@
             this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.guna2DataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView2_CellContentClick);
+            // 
+            // deleteBtn
+            // 
+            this.deleteBtn.BorderRadius = 26;
+            this.deleteBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.deleteBtn.CheckedState.ForeColor = System.Drawing.Color.Crimson;
+            this.deleteBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.deleteBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.deleteBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.deleteBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.deleteBtn.FillColor = System.Drawing.Color.IndianRed;
+            this.deleteBtn.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteBtn.ForeColor = System.Drawing.Color.White;
+            this.deleteBtn.Location = new System.Drawing.Point(287, 101);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(112, 36);
+            this.deleteBtn.TabIndex = 15;
+            this.deleteBtn.Text = "Delete";
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
+            // 
+            // tb_emp_id
+            // 
+            this.tb_emp_id.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_emp_id.DefaultText = "";
+            this.tb_emp_id.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tb_emp_id.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tb_emp_id.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_emp_id.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_emp_id.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_emp_id.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tb_emp_id.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_emp_id.Location = new System.Drawing.Point(67, 101);
+            this.tb_emp_id.Name = "tb_emp_id";
+            this.tb_emp_id.PlaceholderText = "Enter ID";
+            this.tb_emp_id.SelectedText = "";
+            this.tb_emp_id.Size = new System.Drawing.Size(200, 36);
+            this.tb_emp_id.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.tb_emp_id.TabIndex = 2;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(63, 78);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(26, 20);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "ID";
             // 
             // uc_Employee
             // 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerSignIn));
             this.lbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,10 +42,10 @@
             // lbl
             // 
             this.lbl.AutoSize = true;
-            this.lbl.Location = new System.Drawing.Point(541, 62);
+            this.lbl.Location = new System.Drawing.Point(15, 30);
             this.lbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(350, 32);
+            this.lbl.Size = new System.Drawing.Size(277, 26);
             this.lbl.TabIndex = 0;
             this.lbl.Text = "Cutomer Sign in Account";
             this.lbl.Click += new System.EventHandler(this.lbl_Click);
@@ -52,30 +53,33 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(524, 137);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(71, 77);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 32);
+            this.label1.Size = new System.Drawing.Size(105, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Username";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(524, 250);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(71, 179);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 32);
+            this.label2.Size = new System.Drawing.Size(100, 24);
             this.label2.TabIndex = 2;
             this.label2.Text = "Password";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(524, 370);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(40, 284);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(260, 32);
+            this.label3.Size = new System.Drawing.Size(178, 24);
             this.label3.TabIndex = 3;
             this.label3.Text = "Confirm Password";
             // 
@@ -90,7 +94,7 @@
             this.Sgn_cmpassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Sgn_cmpassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Sgn_cmpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Sgn_cmpassword.Location = new System.Drawing.Point(530, 436);
+            this.Sgn_cmpassword.Location = new System.Drawing.Point(20, 321);
             this.Sgn_cmpassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Sgn_cmpassword.Name = "Sgn_cmpassword";
             this.Sgn_cmpassword.PlaceholderText = "Enter Password";
@@ -107,7 +111,7 @@
             this.ConfirmBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.ConfirmBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ConfirmBtn.ForeColor = System.Drawing.Color.White;
-            this.ConfirmBtn.Location = new System.Drawing.Point(530, 517);
+            this.ConfirmBtn.Location = new System.Drawing.Point(44, 410);
             this.ConfirmBtn.Name = "ConfirmBtn";
             this.ConfirmBtn.Size = new System.Drawing.Size(180, 45);
             this.ConfirmBtn.TabIndex = 31;
@@ -125,7 +129,7 @@
             this.Sgn_password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Sgn_password.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Sgn_password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Sgn_password.Location = new System.Drawing.Point(530, 310);
+            this.Sgn_password.Location = new System.Drawing.Point(20, 221);
             this.Sgn_password.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Sgn_password.Name = "Sgn_password";
             this.Sgn_password.PlaceholderText = "Enter Password";
@@ -144,7 +148,7 @@
             this.Username_sgn.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Username_sgn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Username_sgn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Username_sgn.Location = new System.Drawing.Point(530, 191);
+            this.Username_sgn.Location = new System.Drawing.Point(20, 117);
             this.Username_sgn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Username_sgn.Name = "Username_sgn";
             this.Username_sgn.PlaceholderText = "Enter Password";
@@ -155,9 +159,10 @@
             // 
             // CustomerSignIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 986);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.Username_sgn);
             this.Controls.Add(this.Sgn_password);
             this.Controls.Add(this.ConfirmBtn);

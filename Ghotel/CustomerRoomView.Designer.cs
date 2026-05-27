@@ -31,42 +31,34 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerRoomView));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.uC_CustomerRoomView1 = new Ghotel.UC_CustomerRoomView();
             this.label1 = new System.Windows.Forms.Label();
             this.labelCustomerName = new System.Windows.Forms.Label();
             this.DsExitBtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.checkInBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.roomDetailsBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.ExistingCustomerCheckIn = new Ghotel.ExistingCustomerCheckIn1();
+            this.uC_CustomerRoomView1 = new Ghotel.UC_CustomerRoomView();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.ExistingCustomerCheckIn);
             this.panel1.Controls.Add(this.uC_CustomerRoomView1);
-            this.panel1.Location = new System.Drawing.Point(0, 111);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(0, 90);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1796, 841);
+            this.panel1.Size = new System.Drawing.Size(1347, 683);
             this.panel1.TabIndex = 0;
-            // 
-            // uC_CustomerRoomView1
-            // 
-            this.uC_CustomerRoomView1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.uC_CustomerRoomView1.Location = new System.Drawing.Point(0, 0);
-            this.uC_CustomerRoomView1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.uC_CustomerRoomView1.Name = "uC_CustomerRoomView1";
-            this.uC_CustomerRoomView1.Size = new System.Drawing.Size(1796, 841);
-            this.uC_CustomerRoomView1.TabIndex = 0;
-            this.uC_CustomerRoomView1.UserTextbox = null;
-            this.uC_CustomerRoomView1.Load += new System.EventHandler(this.uC_CustomerRoomView1_Load_2);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(5, 62);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(4, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 29);
+            this.label1.Size = new System.Drawing.Size(182, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Welcome Customer,";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -74,11 +66,10 @@
             // labelCustomerName
             // 
             this.labelCustomerName.AutoSize = true;
-            this.labelCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCustomerName.Location = new System.Drawing.Point(256, 62);
-            this.labelCustomerName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCustomerName.Location = new System.Drawing.Point(192, 50);
             this.labelCustomerName.Name = "labelCustomerName";
-            this.labelCustomerName.Size = new System.Drawing.Size(0, 29);
+            this.labelCustomerName.Size = new System.Drawing.Size(0, 20);
             this.labelCustomerName.TabIndex = 2;
             // 
             // DsExitBtn
@@ -92,11 +83,11 @@
             this.DsExitBtn.ForeColor = System.Drawing.Color.White;
             this.DsExitBtn.Image = ((System.Drawing.Image)(resources.GetObject("DsExitBtn.Image")));
             this.DsExitBtn.ImageSize = new System.Drawing.Size(100, 100);
-            this.DsExitBtn.Location = new System.Drawing.Point(0, -4);
-            this.DsExitBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DsExitBtn.Location = new System.Drawing.Point(0, -3);
+            this.DsExitBtn.Margin = new System.Windows.Forms.Padding(2);
             this.DsExitBtn.Name = "DsExitBtn";
             this.DsExitBtn.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.DsExitBtn.Size = new System.Drawing.Size(55, 50);
+            this.DsExitBtn.Size = new System.Drawing.Size(41, 41);
             this.DsExitBtn.TabIndex = 7;
             this.DsExitBtn.Click += new System.EventHandler(this.DsExitBtn_Click);
             // 
@@ -105,17 +96,76 @@
             this.guna2Elipse1.BorderRadius = 30;
             this.guna2Elipse1.TargetControl = this;
             // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 30;
+            this.guna2Elipse2.TargetControl = this;
+            // 
+            // checkInBtn
+            // 
+            this.checkInBtn.AutoRoundedCorners = true;
+            this.checkInBtn.BorderRadius = 21;
+            this.checkInBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.checkInBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.checkInBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.checkInBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.checkInBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.checkInBtn.ForeColor = System.Drawing.Color.White;
+            this.checkInBtn.Location = new System.Drawing.Point(658, 38);
+            this.checkInBtn.Name = "checkInBtn";
+            this.checkInBtn.Size = new System.Drawing.Size(180, 45);
+            this.checkInBtn.TabIndex = 1;
+            this.checkInBtn.Text = "Check-in";
+            this.checkInBtn.Click += new System.EventHandler(this.checkInBtn_Click);
+            // 
+            // roomDetailsBtn
+            // 
+            this.roomDetailsBtn.AutoRoundedCorners = true;
+            this.roomDetailsBtn.BorderRadius = 21;
+            this.roomDetailsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.roomDetailsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.roomDetailsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.roomDetailsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.roomDetailsBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.roomDetailsBtn.ForeColor = System.Drawing.Color.White;
+            this.roomDetailsBtn.Location = new System.Drawing.Point(445, 38);
+            this.roomDetailsBtn.Name = "roomDetailsBtn";
+            this.roomDetailsBtn.Size = new System.Drawing.Size(180, 45);
+            this.roomDetailsBtn.TabIndex = 8;
+            this.roomDetailsBtn.Text = "Room Details";
+            this.roomDetailsBtn.Click += new System.EventHandler(this.roomDetailsBtn_Click);
+            // 
+            // ExistingCustomerCheckIn
+            // 
+            this.ExistingCustomerCheckIn.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ExistingCustomerCheckIn.Location = new System.Drawing.Point(0, 0);
+            this.ExistingCustomerCheckIn.Name = "ExistingCustomerCheckIn";
+            this.ExistingCustomerCheckIn.Size = new System.Drawing.Size(1347, 683);
+            this.ExistingCustomerCheckIn.TabIndex = 1;
+            // 
+            // uC_CustomerRoomView1
+            // 
+            this.uC_CustomerRoomView1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.uC_CustomerRoomView1.Location = new System.Drawing.Point(0, 0);
+            this.uC_CustomerRoomView1.Margin = new System.Windows.Forms.Padding(4);
+            this.uC_CustomerRoomView1.Name = "uC_CustomerRoomView1";
+            this.uC_CustomerRoomView1.Size = new System.Drawing.Size(1347, 683);
+            this.uC_CustomerRoomView1.TabIndex = 0;
+            this.uC_CustomerRoomView1.UserTextbox = null;
+            this.uC_CustomerRoomView1.Load += new System.EventHandler(this.uC_CustomerRoomView1_Load_2);
+            // 
             // CustomerRoomView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1775, 788);
+            this.ClientSize = new System.Drawing.Size(1040, 640);
+            this.Controls.Add(this.roomDetailsBtn);
+            this.Controls.Add(this.checkInBtn);
             this.Controls.Add(this.DsExitBtn);
             this.Controls.Add(this.labelCustomerName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CustomerRoomView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerRoomView";
@@ -135,5 +185,9 @@
         private Guna.UI2.WinForms.Guna2CircleButton DsExitBtn;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private UC_CustomerRoomView uC_CustomerRoomView1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private Guna.UI2.WinForms.Guna2Button checkInBtn;
+        private ExistingCustomerCheckIn1 ExistingCustomerCheckIn;
+        private Guna.UI2.WinForms.Guna2Button roomDetailsBtn;
     }
 }

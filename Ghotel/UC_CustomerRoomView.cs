@@ -24,29 +24,69 @@ namespace Ghotel
 
         private void UC_CustomerRoomView_Load(object sender, EventArgs e)
         {
-            query = "SELECT cid, cname, mobile, nationality, gender, dob, idproof, " +
-        "address, checkin, checkout, room_type, bed, price " +
-        "FROM customer INNER JOIN addrooms ON customer.room_id = addrooms.room_id " +
-        "WHERE customer.cust_username = '" + UserTextbox + "'";
-            DataSet ds = fn.getData(query);
-            guna2DataGridView1.DataSource = ds.Tables[0];
-
+            LoadData();
         }
 
         public void LoadData()
         {
-           
+            if (string.IsNullOrEmpty(UserTextbox))
+            {
+                MessageBox.Show("Username is empty.");
+                return;
+            }
+
+            query = "SELECT " +
+                    "customer.cid, " +
+                    "customer.cname, " +
+                    "customer.mobile, " +
+                    "customer.nationality, " +
+                    "customer.gender, " +
+                    "customer.dob, " +
+                    "customer.idproof, " +
+                    "customer.address, " +
+                    "customer.checkin, " +
+                    "customer.checkout, " +
+                    "addrooms.booked, " +
+                    "addrooms.room_type, " +
+                    "addrooms.bed, " +
+                    "addrooms.price " +
+                    "FROM customer " +
+                    "INNER JOIN addrooms ON customer.room_id = addrooms.room_id " +
+                    "WHERE customer.cust_username = '" + UserTextbox + "' " +
+                    "ORDER BY customer.cid DESC";
+
+            DataSet ds = fn.getData(query);
+
+            if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                guna2DataGridView1.DataSource = null;
+                guna2DataGridView1.Refresh();
+
+                guna2DataGridView1.DataSource = ds.Tables[0];
+
+                guna2DataGridView1.AutoSizeColumnsMode =
+                    DataGridViewAutoSizeColumnsMode.Fill;
+
+                guna2DataGridView1.Refresh();
+            }
+            else
+            {
+                guna2DataGridView1.DataSource = null;
+
+                MessageBox.Show(
+                    "No room details found for this account.",
+                    "No Data",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
         }
 
-        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
 
         private void doneBtn_Click(object sender, EventArgs e)
         {
             Form parentForm = this.ParentForm;
-            parentForm.Hide();
+            parentForm?.Hide();
             Form1 form1 = new Form1();
             form1.Show();
         }
@@ -54,7 +94,7 @@ namespace Ghotel
         private void doneBtn_Click_1(object sender, EventArgs e)
         {
             Form parentForm = this.ParentForm;
-            parentForm.Hide();
+            parentForm?.Hide();
             Form1 form1 = new Form1();
             form1.Show();
         }

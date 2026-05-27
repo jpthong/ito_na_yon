@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.Co_name = new Guna.UI2.WinForms.Guna2TextBox();
@@ -54,11 +54,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 17);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(107, 70);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(253, 29);
+            this.label1.Size = new System.Drawing.Size(278, 37);
             this.label1.TabIndex = 1;
             this.label1.Text = "Customer Check Out";
             // 
@@ -96,26 +96,26 @@
             // 
             // CheckoutGrid
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.CheckoutGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CheckoutGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.CheckoutGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CheckoutGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.CheckoutGrid.ColumnHeadersHeight = 4;
             this.CheckoutGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.CheckoutGrid.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.CheckoutGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.CheckoutGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.CheckoutGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.CheckoutGrid.Location = new System.Drawing.Point(13, 145);
@@ -125,7 +125,7 @@
             this.CheckoutGrid.RowHeadersVisible = false;
             this.CheckoutGrid.RowHeadersWidth = 51;
             this.CheckoutGrid.RowTemplate.Height = 24;
-            this.CheckoutGrid.Size = new System.Drawing.Size(1381, 340);
+            this.CheckoutGrid.Size = new System.Drawing.Size(1185, 340);
             this.CheckoutGrid.TabIndex = 13;
             this.CheckoutGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.CheckoutGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -196,7 +196,7 @@
             this.CheckoutRoomNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.CheckoutRoomNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.CheckoutRoomNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CheckoutRoomNumber.Location = new System.Drawing.Point(497, 544);
+            this.CheckoutRoomNumber.Location = new System.Drawing.Point(386, 544);
             this.CheckoutRoomNumber.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.CheckoutRoomNumber.Name = "CheckoutRoomNumber";
             this.CheckoutRoomNumber.PlaceholderText = "Enter Full Name";
@@ -211,7 +211,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(494, 522);
+            this.label4.Location = new System.Drawing.Point(383, 522);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 18);
@@ -222,7 +222,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(888, 522);
+            this.label5.Location = new System.Drawing.Point(736, 522);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 18);
@@ -234,7 +234,7 @@
             this.CheckOutDate.Checked = true;
             this.CheckOutDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.CheckOutDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.CheckOutDate.Location = new System.Drawing.Point(854, 544);
+            this.CheckOutDate.Location = new System.Drawing.Point(702, 544);
             this.CheckOutDate.Margin = new System.Windows.Forms.Padding(2);
             this.CheckOutDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.CheckOutDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -254,7 +254,7 @@
             this.custom_checkoutBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.custom_checkoutBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.custom_checkoutBtn.ForeColor = System.Drawing.Color.White;
-            this.custom_checkoutBtn.Location = new System.Drawing.Point(1202, 544);
+            this.custom_checkoutBtn.Location = new System.Drawing.Point(1016, 536);
             this.custom_checkoutBtn.Margin = new System.Windows.Forms.Padding(2);
             this.custom_checkoutBtn.Name = "custom_checkoutBtn";
             this.custom_checkoutBtn.Size = new System.Drawing.Size(135, 37);

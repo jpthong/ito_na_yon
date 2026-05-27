@@ -141,6 +141,12 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExistingCustomerCheckIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExistingCustomerCheckIn.Designer.cs">
+      <DependentUpon>ExistingCustomerCheckIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,9 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExistingCustomerCheckIn.resx">
+      <DependentUpon>ExistingCustomerCheckIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,6 +210,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UC_CustomerDetails.resx">
       <DependentUpon>UC_CustomerDetails.cs</DependentUpon>
@@ -225,6 +235,32 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\logo ng antech pota.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0cb0523d-aa40-4b18-89c1-74ec9cd33eff.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0cb0523d-aa40-4b18-89c1-74ec9cd33eff1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last na talaga.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\321.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\444.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

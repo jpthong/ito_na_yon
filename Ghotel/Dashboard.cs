@@ -51,9 +51,9 @@ namespace Ghotel
 
         private void CdBtn_Click(object sender, EventArgs e)
         {
-            uC_CustomerDetails11.Visible = true;
+            uC_CustomerDetails12.Visible = true;
             Moving_panel.Left = CdBtn.Left + 18;
-            uC_CustomerDetails11.BringToFront();
+            uC_CustomerDetails12.BringToFront();
         }
 
         private void EmpBtn_Click(object sender, EventArgs e)
@@ -90,6 +90,11 @@ namespace Ghotel
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void customerCheckOut1_Load(object sender, EventArgs e)
         {
 
         }

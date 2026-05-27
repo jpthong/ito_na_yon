@@ -51,5 +51,18 @@ namespace Ghotel
         {
 
         }
+
+        private void checkInBtn_Click(object sender, EventArgs e)
+        {
+            ExistingCustomerCheckIn.Visible = true;
+            BringToFront();
+        }
+
+        private void roomDetailsBtn_Click(object sender, EventArgs e)
+        {
+            ExistingCustomerCheckIn.Visible = false;
+            uC_CustomerRoomView1.Visible = true;
+            BringToFront();
+        }
     }
 }

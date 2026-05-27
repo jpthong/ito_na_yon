@@ -64,7 +64,7 @@ namespace Ghotel.All_user
 
         private void Username_sgn_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void lbl_Click(object sender, EventArgs e)
