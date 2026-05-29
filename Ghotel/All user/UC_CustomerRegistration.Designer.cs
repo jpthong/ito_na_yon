@@ -85,7 +85,8 @@ namespace Ghotel.All_user
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 20);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(42, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(270, 32);
@@ -94,11 +95,14 @@ namespace Ghotel.All_user
             // 
             // birthTxt
             // 
+            this.birthTxt.BackColor = System.Drawing.Color.Transparent;
             this.birthTxt.Checked = true;
             this.birthTxt.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(221)))));
+            this.birthTxt.FillColor = System.Drawing.Color.Blue;
+            this.birthTxt.FocusedColor = System.Drawing.Color.Blue;
             this.birthTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.birthTxt.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.birthTxt.Location = new System.Drawing.Point(26, 387);
+            this.birthTxt.Location = new System.Drawing.Point(77, 392);
             this.birthTxt.Margin = new System.Windows.Forms.Padding(2);
             this.birthTxt.MaxDate = new System.DateTime(2026, 5, 27, 0, 0, 0, 0);
             this.birthTxt.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -110,9 +114,10 @@ namespace Ghotel.All_user
             // checkinTxt
             // 
             this.checkinTxt.Checked = true;
-            this.checkinTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.checkinTxt.FillColor = System.Drawing.Color.DarkBlue;
+            this.checkinTxt.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkinTxt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.checkinTxt.Location = new System.Drawing.Point(270, 226);
+            this.checkinTxt.Location = new System.Drawing.Point(319, 250);
             this.checkinTxt.Margin = new System.Windows.Forms.Padding(2);
             this.checkinTxt.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.checkinTxt.MinDate = new System.DateTime(2026, 5, 26, 0, 0, 0, 0);
@@ -124,22 +129,25 @@ namespace Ghotel.All_user
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 73);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(74, 73);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 18);
+            this.label2.Size = new System.Drawing.Size(55, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Name:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 218);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(77, 227);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 18);
+            this.label3.Size = new System.Drawing.Size(91, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "Nationality:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -147,110 +155,120 @@ namespace Ghotel.All_user
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(31, 289);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(74, 298);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 18);
+            this.label4.Size = new System.Drawing.Size(65, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Gender:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(34, 354);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(74, 372);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 18);
+            this.label5.Size = new System.Drawing.Size(104, 20);
             this.label5.TabIndex = 6;
             this.label5.Text = "Date of Birth:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(268, 75);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(316, 73);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 18);
+            this.label6.Size = new System.Drawing.Size(73, 20);
             this.label6.TabIndex = 6;
             this.label6.Text = "ID Proof:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(270, 146);
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(317, 152);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 18);
+            this.label7.Size = new System.Drawing.Size(70, 20);
             this.label7.TabIndex = 6;
             this.label7.Text = "Address:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(283, 206);
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(317, 227);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 18);
+            this.label8.Size = new System.Drawing.Size(72, 20);
             this.label8.TabIndex = 6;
             this.label8.Text = "Check In:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(505, 73);
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(585, 69);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 18);
+            this.label9.Size = new System.Drawing.Size(40, 20);
             this.label9.TabIndex = 6;
             this.label9.Text = "Bed:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(505, 146);
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(585, 146);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(90, 18);
+            this.label10.Size = new System.Drawing.Size(92, 20);
             this.label10.TabIndex = 6;
             this.label10.Text = "Room Type:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(505, 218);
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(585, 230);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(78, 18);
+            this.label11.Size = new System.Drawing.Size(80, 20);
             this.label11.TabIndex = 6;
             this.label11.Text = "Room No.";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(505, 289);
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(585, 289);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 18);
+            this.label12.Size = new System.Drawing.Size(47, 20);
             this.label12.TabIndex = 6;
             this.label12.Text = "Price:";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(23, 146);
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(74, 154);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(80, 18);
+            this.label13.Size = new System.Drawing.Size(86, 20);
             this.label13.TabIndex = 5;
             this.label13.Text = "Mobile No.";
             // 
@@ -265,7 +283,7 @@ namespace Ghotel.All_user
             this.ct_name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ct_name.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ct_name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ct_name.Location = new System.Drawing.Point(26, 94);
+            this.ct_name.Location = new System.Drawing.Point(77, 96);
             this.ct_name.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ct_name.Name = "ct_name";
             this.ct_name.PlaceholderText = "Enter Full Name";
@@ -285,7 +303,7 @@ namespace Ghotel.All_user
             this.ct_no.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ct_no.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ct_no.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ct_no.Location = new System.Drawing.Point(26, 175);
+            this.ct_no.Location = new System.Drawing.Point(77, 175);
             this.ct_no.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ct_no.Name = "ct_no";
             this.ct_no.PlaceholderText = "Enter Contact No.";
@@ -304,7 +322,7 @@ namespace Ghotel.All_user
             this.ct_nation.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ct_nation.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ct_nation.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ct_nation.Location = new System.Drawing.Point(26, 250);
+            this.ct_nation.Location = new System.Drawing.Point(77, 250);
             this.ct_nation.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ct_nation.Name = "ct_nation";
             this.ct_nation.PlaceholderText = "Enter Nationality";
@@ -323,7 +341,7 @@ namespace Ghotel.All_user
             this.ct_id.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ct_id.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ct_id.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ct_id.Location = new System.Drawing.Point(271, 96);
+            this.ct_id.Location = new System.Drawing.Point(317, 96);
             this.ct_id.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ct_id.Name = "ct_id";
             this.ct_id.PlaceholderText = "Enter ID";
@@ -343,7 +361,7 @@ namespace Ghotel.All_user
             this.ct_pr.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ct_pr.ForeColor = System.Drawing.Color.Black;
             this.ct_pr.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ct_pr.Location = new System.Drawing.Point(509, 310);
+            this.ct_pr.Location = new System.Drawing.Point(588, 310);
             this.ct_pr.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ct_pr.Name = "ct_pr";
             this.ct_pr.PlaceholderForeColor = System.Drawing.Color.DarkGray;
@@ -368,7 +386,7 @@ namespace Ghotel.All_user
             "Male",
             "Female",
             "Others"});
-            this.ct_gen.Location = new System.Drawing.Point(26, 310);
+            this.ct_gen.Location = new System.Drawing.Point(77, 318);
             this.ct_gen.Margin = new System.Windows.Forms.Padding(2);
             this.ct_gen.Name = "ct_gen";
             this.ct_gen.Size = new System.Drawing.Size(177, 36);
@@ -385,7 +403,7 @@ namespace Ghotel.All_user
             this.ct_address.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ct_address.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ct_address.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ct_address.Location = new System.Drawing.Point(273, 173);
+            this.ct_address.Location = new System.Drawing.Point(319, 175);
             this.ct_address.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ct_address.Name = "ct_address";
             this.ct_address.PlaceholderText = "Enter Full Address";
@@ -407,27 +425,30 @@ namespace Ghotel.All_user
             "Single bed",
             "Double bed",
             "Triple bed"});
-            this.ct_bed.Location = new System.Drawing.Point(508, 96);
+            this.ct_bed.Location = new System.Drawing.Point(588, 89);
             this.ct_bed.Margin = new System.Windows.Forms.Padding(2);
             this.ct_bed.Name = "ct_bed";
-            this.ct_bed.Size = new System.Drawing.Size(177, 36);
+            this.ct_bed.Size = new System.Drawing.Size(176, 36);
             this.ct_bed.TabIndex = 23;
             this.ct_bed.SelectedIndexChanged += new System.EventHandler(this.ct_bed_SelectedIndexChanged);
             // 
             // AllocateBtn
             // 
-            this.AllocateBtn.BorderRadius = 30;
-            this.AllocateBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.AllocateBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.AllocateBtn.BorderRadius = 20;
+            this.AllocateBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.AllocateBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.AllocateBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.AllocateBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.AllocateBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.AllocateBtn.FillColor = System.Drawing.Color.DarkBlue;
             this.AllocateBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AllocateBtn.ForeColor = System.Drawing.Color.White;
-            this.AllocateBtn.Location = new System.Drawing.Point(509, 372);
+            this.AllocateBtn.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.AllocateBtn.Location = new System.Drawing.Point(603, 377);
             this.AllocateBtn.Margin = new System.Windows.Forms.Padding(2);
             this.AllocateBtn.Name = "AllocateBtn";
-            this.AllocateBtn.Size = new System.Drawing.Size(135, 37);
+            this.AllocateBtn.Size = new System.Drawing.Size(147, 37);
             this.AllocateBtn.TabIndex = 24;
             this.AllocateBtn.Text = "Allocate Room";
             this.AllocateBtn.Click += new System.EventHandler(this.AllocateBtn_Click);
@@ -446,7 +467,7 @@ namespace Ghotel.All_user
             "econo",
             "premium",
             "deluxe"});
-            this.ct_rt.Location = new System.Drawing.Point(509, 175);
+            this.ct_rt.Location = new System.Drawing.Point(588, 175);
             this.ct_rt.Margin = new System.Windows.Forms.Padding(2);
             this.ct_rt.Name = "ct_rt";
             this.ct_rt.Size = new System.Drawing.Size(177, 36);
@@ -456,7 +477,7 @@ namespace Ghotel.All_user
             // ct_rn
             // 
             this.ct_rn.FormattingEnabled = true;
-            this.ct_rn.Location = new System.Drawing.Point(509, 249);
+            this.ct_rn.Location = new System.Drawing.Point(588, 250);
             this.ct_rn.Margin = new System.Windows.Forms.Padding(2);
             this.ct_rn.Name = "ct_rn";
             this.ct_rn.Size = new System.Drawing.Size(177, 21);
@@ -479,21 +500,22 @@ namespace Ghotel.All_user
             // 
             // payBtn
             // 
-            this.payBtn.BorderRadius = 30;
+            this.payBtn.BorderColor = System.Drawing.Color.Blue;
+            this.payBtn.BorderRadius = 20;
             this.payBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             this.payBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.payBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.payBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.payBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.payBtn.FillColor = System.Drawing.Color.DarkBlue;
             this.payBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.payBtn.ForeColor = System.Drawing.Color.White;
-            this.payBtn.Location = new System.Drawing.Point(603, 495);
+            this.payBtn.Location = new System.Drawing.Point(409, 529);
             this.payBtn.Margin = new System.Windows.Forms.Padding(2);
             this.payBtn.Name = "payBtn";
             this.payBtn.Size = new System.Drawing.Size(135, 37);
             this.payBtn.TabIndex = 31;
             this.payBtn.Text = "Pay";
-            this.payBtn.Visible = false;
             this.payBtn.Click += new System.EventHandler(this.payBtn_Click);
             // 
             // Payment_box
@@ -514,17 +536,17 @@ namespace Ghotel.All_user
             this.Payment_box.SelectedText = "";
             this.Payment_box.Size = new System.Drawing.Size(176, 29);
             this.Payment_box.TabIndex = 33;
-            this.Payment_box.Visible = false;
             this.Payment_box.TextChanged += new System.EventHandler(this.Payment_box_TextChanged);
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(287, 299);
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(316, 289);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(121, 18);
+            this.label18.Size = new System.Drawing.Size(126, 20);
             this.label18.TabIndex = 37;
             this.label18.Text = "Promo Discount:";
             // 
@@ -539,7 +561,7 @@ namespace Ghotel.All_user
             this.Discount_box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Discount_box.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Discount_box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Discount_box.Location = new System.Drawing.Point(282, 327);
+            this.Discount_box.Location = new System.Drawing.Point(319, 310);
             this.Discount_box.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Discount_box.Name = "Discount_box";
             this.Discount_box.PlaceholderText = "Enter Promo Discount";
@@ -550,30 +572,32 @@ namespace Ghotel.All_user
             // 
             // DiscountBtn
             // 
-            this.DiscountBtn.BorderRadius = 30;
-            this.DiscountBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.DiscountBtn.BorderRadius = 20;
+            this.DiscountBtn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.DiscountBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.DiscountBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.DiscountBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.DiscountBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.DiscountBtn.FillColor = System.Drawing.Color.DarkBlue;
             this.DiscountBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DiscountBtn.ForeColor = System.Drawing.Color.White;
-            this.DiscountBtn.Location = new System.Drawing.Point(282, 372);
+            this.DiscountBtn.Location = new System.Drawing.Point(335, 377);
             this.DiscountBtn.Margin = new System.Windows.Forms.Padding(2);
             this.DiscountBtn.Name = "DiscountBtn";
-            this.DiscountBtn.Size = new System.Drawing.Size(135, 37);
-            this.DiscountBtn.TabIndex = 40;
+            this.DiscountBtn.Size = new System.Drawing.Size(140, 37);
+            this.DiscountBtn.TabIndex = 8;
             this.DiscountBtn.Text = "Discount";
             this.DiscountBtn.Click += new System.EventHandler(this.DiscountBtn_Click);
             // 
             // paylbl
             // 
             this.paylbl.AutoSize = true;
-            this.paylbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paylbl.Location = new System.Drawing.Point(392, 459);
+            this.paylbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paylbl.ForeColor = System.Drawing.Color.White;
+            this.paylbl.Location = new System.Drawing.Point(383, 472);
             this.paylbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.paylbl.Name = "paylbl";
-            this.paylbl.Size = new System.Drawing.Size(103, 18);
+            this.paylbl.Size = new System.Drawing.Size(110, 20);
             this.paylbl.TabIndex = 41;
             this.paylbl.Text = "Payment here:";
             this.paylbl.Visible = false;
@@ -581,11 +605,12 @@ namespace Ghotel.All_user
             // chgelbl
             // 
             this.chgelbl.AutoSize = true;
-            this.chgelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chgelbl.Location = new System.Drawing.Point(384, 551);
+            this.chgelbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chgelbl.ForeColor = System.Drawing.Color.White;
+            this.chgelbl.Location = new System.Drawing.Point(573, 495);
             this.chgelbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.chgelbl.Name = "chgelbl";
-            this.chgelbl.Size = new System.Drawing.Size(56, 18);
+            this.chgelbl.Size = new System.Drawing.Size(59, 20);
             this.chgelbl.TabIndex = 42;
             this.chgelbl.Text = "change";
             this.chgelbl.Visible = false;
@@ -627,7 +652,8 @@ namespace Ghotel.All_user
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.BackgroundImage = global::Ghotel.Properties.Resources.last1;
+            this.BackgroundImage = global::Ghotel.Properties.Resources.pla;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.chgelbl);
             this.Controls.Add(this.paylbl);
             this.Controls.Add(this.DiscountBtn);

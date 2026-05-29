@@ -38,6 +38,7 @@
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.checkInBtn = new Guna.UI2.WinForms.Guna2Button();
             this.roomDetailsBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.checkOutBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ExistingCustomerCheckIn = new Ghotel.ExistingCustomerCheckIn1();
             this.uC_CustomerRoomView1 = new Ghotel.UC_CustomerRoomView();
             this.panel1.SuspendLayout();
@@ -111,7 +112,7 @@
             this.checkInBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.checkInBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.checkInBtn.ForeColor = System.Drawing.Color.White;
-            this.checkInBtn.Location = new System.Drawing.Point(658, 38);
+            this.checkInBtn.Location = new System.Drawing.Point(628, 38);
             this.checkInBtn.Name = "checkInBtn";
             this.checkInBtn.Size = new System.Drawing.Size(180, 45);
             this.checkInBtn.TabIndex = 1;
@@ -128,12 +129,29 @@
             this.roomDetailsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.roomDetailsBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.roomDetailsBtn.ForeColor = System.Drawing.Color.White;
-            this.roomDetailsBtn.Location = new System.Drawing.Point(445, 38);
+            this.roomDetailsBtn.Location = new System.Drawing.Point(422, 38);
             this.roomDetailsBtn.Name = "roomDetailsBtn";
             this.roomDetailsBtn.Size = new System.Drawing.Size(180, 45);
             this.roomDetailsBtn.TabIndex = 8;
             this.roomDetailsBtn.Text = "Room Details";
             this.roomDetailsBtn.Click += new System.EventHandler(this.roomDetailsBtn_Click);
+            // 
+            // checkOutBtn
+            // 
+            this.checkOutBtn.AutoRoundedCorners = true;
+            this.checkOutBtn.BorderRadius = 21;
+            this.checkOutBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.checkOutBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.checkOutBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.checkOutBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.checkOutBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.checkOutBtn.ForeColor = System.Drawing.Color.White;
+            this.checkOutBtn.Location = new System.Drawing.Point(826, 38);
+            this.checkOutBtn.Name = "checkOutBtn";
+            this.checkOutBtn.Size = new System.Drawing.Size(180, 45);
+            this.checkOutBtn.TabIndex = 2;
+            this.checkOutBtn.Text = "Check-out";
+            this.checkOutBtn.Click += new System.EventHandler(this.checkOutBtn_Click);
             // 
             // ExistingCustomerCheckIn
             // 
@@ -142,6 +160,7 @@
             this.ExistingCustomerCheckIn.Name = "ExistingCustomerCheckIn";
             this.ExistingCustomerCheckIn.Size = new System.Drawing.Size(1347, 683);
             this.ExistingCustomerCheckIn.TabIndex = 1;
+            this.ExistingCustomerCheckIn.Load += new System.EventHandler(this.ExistingCustomerCheckIn_Load);
             // 
             // uC_CustomerRoomView1
             // 
@@ -159,6 +178,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1040, 640);
+            this.Controls.Add(this.checkOutBtn);
             this.Controls.Add(this.roomDetailsBtn);
             this.Controls.Add(this.checkInBtn);
             this.Controls.Add(this.DsExitBtn);
@@ -189,5 +209,6 @@
         private Guna.UI2.WinForms.Guna2Button checkInBtn;
         private ExistingCustomerCheckIn1 ExistingCustomerCheckIn;
         private Guna.UI2.WinForms.Guna2Button roomDetailsBtn;
+        private Guna.UI2.WinForms.Guna2Button checkOutBtn;
     }
 }

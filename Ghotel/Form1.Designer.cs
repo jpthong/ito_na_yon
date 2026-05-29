@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.regist = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.openCameraBtn = new System.Windows.Forms.Button();
             this.verifyFaceBtn = new System.Windows.Forms.Button();
@@ -50,7 +49,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.regist);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.openCameraBtn);
             this.panel1.Controls.Add(this.verifyFaceBtn);
@@ -68,22 +66,6 @@
             this.panel1.Size = new System.Drawing.Size(1405, 760);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // regist
-            // 
-            this.regist.BorderRadius = 22;
-            this.regist.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.regist.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.regist.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.regist.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.regist.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.regist.ForeColor = System.Drawing.Color.White;
-            this.regist.Location = new System.Drawing.Point(250, 165);
-            this.regist.Name = "regist";
-            this.regist.Size = new System.Drawing.Size(266, 45);
-            this.regist.TabIndex = 7;
-            this.regist.Text = "Regist";
-            this.regist.Click += new System.EventHandler(this.regist_Click);
             // 
             // label2
             // 
@@ -306,7 +288,6 @@
         private System.Windows.Forms.Label Errorlbl;
         private Guna.UI2.WinForms.Guna2CircleButton ExitBtn;
         private Guna.UI2.WinForms.Guna2Button customerSignUp;
-        private Guna.UI2.WinForms.Guna2Button regist;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button verifyFaceBtn;
         private System.Windows.Forms.Button openCameraBtn;

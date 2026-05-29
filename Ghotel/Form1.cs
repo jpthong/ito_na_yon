@@ -281,18 +281,6 @@ namespace Ghotel
 
         private void UserTextbox_TextChanged(object sender, EventArgs e) { }
 
-        private void regist_Click(object sender, EventArgs e)
-        {
-            Form wrapper = new Form();
-            wrapper.WindowState = FormWindowState.Maximized;
-            wrapper.Text = "Customer Registration";
-
-            UC_CustomerRegistration uc = new UC_CustomerRegistration();
-            uc.Dock = DockStyle.Fill;
-            wrapper.Controls.Add(uc);
-
-            this.Hide();
-            wrapper.Show();
-        }
+        
     }
 }

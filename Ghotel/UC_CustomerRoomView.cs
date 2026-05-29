@@ -29,11 +29,7 @@ namespace Ghotel
 
         public void LoadData()
         {
-            if (string.IsNullOrEmpty(UserTextbox))
-            {
-                MessageBox.Show("Username is empty.");
-                return;
-            }
+            if (string.IsNullOrEmpty(UserTextbox)) return;
 
             query = "SELECT " +
                     "customer.cid, " +
@@ -46,6 +42,8 @@ namespace Ghotel
                     "customer.address, " +
                     "customer.checkin, " +
                     "customer.checkout, " +
+                    "customer.checkoutdate, " +
+                    "addrooms.room_number, " +
                     "addrooms.booked, " +
                     "addrooms.room_type, " +
                     "addrooms.bed, " +
@@ -61,18 +59,13 @@ namespace Ghotel
             {
                 guna2DataGridView1.DataSource = null;
                 guna2DataGridView1.Refresh();
-
                 guna2DataGridView1.DataSource = ds.Tables[0];
-
-                guna2DataGridView1.AutoSizeColumnsMode =
-                    DataGridViewAutoSizeColumnsMode.Fill;
-
+                guna2DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 guna2DataGridView1.Refresh();
             }
             else
             {
                 guna2DataGridView1.DataSource = null;
-
                 MessageBox.Show(
                     "No room details found for this account.",
                     "No Data",

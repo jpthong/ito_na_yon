@@ -38,6 +38,8 @@
             this.CdBtn = new Guna.UI2.WinForms.Guna2Button();
             this.AddrmBtn = new Guna.UI2.WinForms.Guna2Button();
             this.MovingPanel = new System.Windows.Forms.Panel();
+            this.uC_CustomerDetails12 = new Ghotel.uC_CustomerDetails1();
+            this.customerCheckOut1 = new Ghotel.All_user.CustomerCheckOut();
             this.addroom1 = new Ghotel.All_user.Addroom();
             this.uC_CustomerRegistration1 = new Ghotel.All_user.UC_CustomerRegistration();
             this.uc_Employee1 = new Ghotel.uc_Employee();
@@ -50,8 +52,6 @@
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.doneBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.customerCheckOut1 = new Ghotel.All_user.CustomerCheckOut();
-            this.uC_CustomerDetails12 = new Ghotel.uC_CustomerDetails1();
             this.panel1.SuspendLayout();
             this.MovingPanel.SuspendLayout();
             this.SuspendLayout();
@@ -91,7 +91,7 @@
             this.CoBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.CoBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.CoBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.CoBtn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CoBtn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.CoBtn.ForeColor = System.Drawing.Color.White;
             this.CoBtn.Location = new System.Drawing.Point(280, 17);
             this.CoBtn.Margin = new System.Windows.Forms.Padding(2);
@@ -183,6 +183,24 @@
             this.MovingPanel.Name = "MovingPanel";
             this.MovingPanel.Size = new System.Drawing.Size(1402, 593);
             this.MovingPanel.TabIndex = 1;
+            // 
+            // uC_CustomerDetails12
+            // 
+            this.uC_CustomerDetails12.BackColor = System.Drawing.Color.Transparent;
+            this.uC_CustomerDetails12.Location = new System.Drawing.Point(0, 0);
+            this.uC_CustomerDetails12.Name = "uC_CustomerDetails12";
+            this.uC_CustomerDetails12.Size = new System.Drawing.Size(1347, 683);
+            this.uC_CustomerDetails12.TabIndex = 5;
+            // 
+            // customerCheckOut1
+            // 
+            this.customerCheckOut1.BackColor = System.Drawing.Color.Transparent;
+            this.customerCheckOut1.Location = new System.Drawing.Point(2, 0);
+            this.customerCheckOut1.Margin = new System.Windows.Forms.Padding(2);
+            this.customerCheckOut1.Name = "customerCheckOut1";
+            this.customerCheckOut1.Size = new System.Drawing.Size(1414, 683);
+            this.customerCheckOut1.TabIndex = 4;
+            this.customerCheckOut1.Load += new System.EventHandler(this.customerCheckOut1_Load);
             // 
             // addroom1
             // 
@@ -296,24 +314,6 @@
             this.doneBtn.TabIndex = 8;
             this.doneBtn.Text = "DONE";
             this.doneBtn.Click += new System.EventHandler(this.doneBtn_Click);
-            // 
-            // customerCheckOut1
-            // 
-            this.customerCheckOut1.BackColor = System.Drawing.Color.Transparent;
-            this.customerCheckOut1.Location = new System.Drawing.Point(2, 0);
-            this.customerCheckOut1.Margin = new System.Windows.Forms.Padding(2);
-            this.customerCheckOut1.Name = "customerCheckOut1";
-            this.customerCheckOut1.Size = new System.Drawing.Size(1414, 683);
-            this.customerCheckOut1.TabIndex = 4;
-            this.customerCheckOut1.Load += new System.EventHandler(this.customerCheckOut1_Load);
-            // 
-            // uC_CustomerDetails12
-            // 
-            this.uC_CustomerDetails12.BackColor = System.Drawing.Color.Transparent;
-            this.uC_CustomerDetails12.Location = new System.Drawing.Point(0, 0);
-            this.uC_CustomerDetails12.Name = "uC_CustomerDetails12";
-            this.uC_CustomerDetails12.Size = new System.Drawing.Size(1347, 683);
-            this.uC_CustomerDetails12.TabIndex = 5;
             // 
             // Dashboard
             // 

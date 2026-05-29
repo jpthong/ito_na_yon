@@ -242,6 +242,7 @@
             this.CheckOutDate.Size = new System.Drawing.Size(202, 29);
             this.CheckOutDate.TabIndex = 19;
             this.CheckOutDate.Value = new System.DateTime(2026, 5, 23, 3, 43, 48, 395);
+            this.CheckOutDate.ValueChanged += new System.EventHandler(this.CheckOutDate_ValueChanged);
             // 
             // custom_checkoutBtn
             // 

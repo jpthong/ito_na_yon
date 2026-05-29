@@ -99,5 +99,10 @@ namespace Ghotel.All_user
         {
 
         }
+
+        private void CheckOutDate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

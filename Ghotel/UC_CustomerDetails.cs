@@ -31,7 +31,7 @@ namespace Ghotel
         private void cb_SortBy_SelectedIndexChanged(object sender, EventArgs e)
         {
             string baseQuery = "SELECT cid, cname, mobile, nationality, gender, dob, idproof, " +
-                               "address, checkin, checkout, checkoutdate, room_type, bed, price " +
+                               "address, checkin, checkout, checkoutdate, room_number, room_type, bed, price " +
                                "FROM customer INNER JOIN addrooms ON customer.room_id = addrooms.room_id";
 
             if (cb_SortBy.SelectedIndex == 0)
